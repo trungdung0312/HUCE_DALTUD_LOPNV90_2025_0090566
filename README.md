@@ -1,7 +1,7 @@
 **1. Phần mềm  tính toán thiết kế cột BTCT chữ nhật theo TCVN 5574:2018** <br>
       **Lớp môn học** LOPNV90 <br>
 **2. Thành viên :** <br>
-      - Nhóm trưởng: Hán Việt Anh - 66TH1 - 0090566 - SĐT - email github: <br>
+      - Nhóm trưởng: Hán Việt Anh - 66TH1 - 0090566 - 0352078216 - email github: hanvietanh127@gmail.com. <br>
       - Thành viên 1: Trần Trung Dũng - 66TH1- 0092766 <br>
       - Thành viên 2: Đỗ Hoàng Nam - 66TH1 - 0097466 <br>
 **3. Tính năng phần mềm**  <br>
