@@ -1,9 +1,10 @@
-1. Phần mềm  tính toán thiết kế cột BTCT chữ nhật theo TCVN 5574:2018
-2. Thành viên :
+**1. Phần mềm  tính toán thiết kế cột BTCT chữ nhật theo TCVN 5574:2018** <br>
+      **Lớp môn học** LOPNV90 <br>
+**2. Thành viên :**
       - Nhóm trưởng: Hán Việt Anh - 66TH1 - 0090566 - SĐT - email github:
       - Thành viên 1: Trần Trung Dũng - 66TH1- 0092766
       - Thành viên 2: Đỗ Hoàng Nam - 66TH1 - 0097466
-3. Tính năng phần mềm (các nhóm chức năng theo sơ đồ phân rã chức năng)
+**3. Tính năng phần mềm** 
    a, Tính năng: Nhập dữ liệu đầu vào
        - Nhập kích thước cột (b, h, l).
        - Nhập thông số vật liệu (Rb, Rs, Rsc).
