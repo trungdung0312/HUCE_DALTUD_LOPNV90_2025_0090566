@@ -1,0 +1,10 @@
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.csproj.AssemblyReference.cache
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.csproj.SuggestedBindingRedirects.cache
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\MainWindow.baml
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\MainWindow.g.cs
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\App.g.cs
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình_MarkupCompile.cache
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.g.resources
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ_án_Lập_trình.Properties.Resources.resources
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.csproj.GenerateResource.cache
+D:\Hán Việt Anh-0090566\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.csproj.CoreCompileInputs.cache
