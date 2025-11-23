@@ -1,0 +1,36 @@
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.AssemblyReference.cache
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\View\MainWindow.baml
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\View\MainWindow.g.cs
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\App.g.cs
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ án Lập trình_MarkupCompile.cache
+C:\Users\ASUS\Downloads\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.exe.config
+C:\Users\ASUS\Downloads\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.xml
+C:\Users\ASUS\Downloads\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.exe
+C:\Users\ASUS\Downloads\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.pdb
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\View\Login.baml
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\View\Login.g.cs
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.g.resources
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ_án_Lập_trình.Properties.Resources.resources
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.GenerateResource.cache
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.exe
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.pdb
+C:\Users\ASUS\Downloads\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.exe.config
+D:\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.exe.config
+D:\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.xml
+D:\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.exe
+D:\Đồ án Lập trình\bin\Debug\Đồ án Lập trình.pdb
+D:\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.AssemblyReference.cache
+D:\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.SuggestedBindingRedirects.cache
+D:\Đồ án Lập trình\obj\Debug\View\MainWindow.baml
+D:\Đồ án Lập trình\obj\Debug\View\Login.baml
+D:\Đồ án Lập trình\obj\Debug\View\MainWindow.g.cs
+D:\Đồ án Lập trình\obj\Debug\View\Login.g.cs
+D:\Đồ án Lập trình\obj\Debug\App.g.cs
+D:\Đồ án Lập trình\obj\Debug\Đồ án Lập trình_MarkupCompile.cache
+D:\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.g.resources
+D:\Đồ án Lập trình\obj\Debug\Đồ_án_Lập_trình.Properties.Resources.resources
+D:\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.GenerateResource.cache
+D:\Đồ án Lập trình\obj\Debug\TinhtoancotBTCT.csproj.CoreCompileInputs.cache
+D:\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.exe
+D:\Đồ án Lập trình\obj\Debug\Đồ án Lập trình.pdb
