@@ -59,6 +59,7 @@
     <Compile Include="FinalResultWindow.xaml.cs">
       <DependentUpon>FinalResultWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ColumnModel.cs" />
     <Compile Include="Model\ReabarModel.cs" />
     <Compile Include="RebarWindow.xaml.cs">
       <DependentUpon>RebarWindow.xaml</DependentUpon>
