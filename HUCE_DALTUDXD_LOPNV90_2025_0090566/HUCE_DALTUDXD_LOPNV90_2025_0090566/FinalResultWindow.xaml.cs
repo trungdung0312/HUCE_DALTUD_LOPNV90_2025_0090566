@@ -55,13 +55,13 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566
         {
             DrawArea.Children.Clear();
 
-            double X = double.Parse(txtWidth.Text);     // mm
-            double Y = double.Parse(txtHeight.Text);    // mm
+            double X = double.Parse(txtWidth.Text);
+            double Y = double.Parse(txtHeight.Text);
             int bars = int.Parse(txtBars.Text);
-            double dia = double.Parse(txtBarDia.Text);  // mm
+            double dia = double.Parse(txtBarDia.Text);
 
-            double scale = 1.0; // mm → pixel tạm (có Viewbox nên không lo zoom)
-            double cover = 25 * scale;
+            double scale = 1.0;
+            double cover = 25;   // lớp bảo vệ mm → 25 mm
 
             double w = X * scale;
             double h = Y * scale;
@@ -69,21 +69,47 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566
             double left = 50;
             double top = 50;
 
-            // Khung cột màu đen
-            Rectangle rec = new Rectangle
+            // 1) Mép ngoài cột
+            Rectangle outer = new Rectangle
             {
                 Width = w,
                 Height = h,
                 Stroke = Brushes.Black,
                 StrokeThickness = 3
             };
-            Canvas.SetLeft(rec, left);
-            Canvas.SetTop(rec, top);
-            DrawArea.Children.Add(rec);
+            Canvas.SetLeft(outer, left);
+            Canvas.SetTop(outer, top);
+            DrawArea.Children.Add(outer);
 
-            // Vẽ thép 4 góc + thép phân bố
+            // 2) Lớp bê tông bảo vệ
+            Rectangle concreteCover = new Rectangle
+            {
+                Width = w - 2 * cover,
+                Height = h - 2 * cover,
+                Stroke = Brushes.Gray,
+                StrokeThickness = 2,
+                StrokeDashArray = new DoubleCollection { 4, 2 } // gạch gạch cho dễ nhìn
+            };
+            Canvas.SetLeft(concreteCover, left + cover);
+            Canvas.SetTop(concreteCover, top + cover);
+            DrawArea.Children.Add(concreteCover);
+
+            // 3) Khung cốt thép (inner frame)
+            Rectangle inner = new Rectangle
+            {
+                Width = w - 2 * cover,
+                Height = h - 2 * cover,
+                Stroke = Brushes.Red,
+                StrokeThickness = 2
+            };
+            Canvas.SetLeft(inner, left + cover);
+            Canvas.SetTop(inner, top + cover);
+            DrawArea.Children.Add(inner);
+
+            // 4) Thép
             DrawBars(left, top, w, h, bars, dia);
         }
+
 
         private void DrawBars(double left, double top, double w, double h, int barsPerSide, double dia)
         {
@@ -132,5 +158,6 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566
             Canvas.SetTop(e, y - r);
             DrawArea.Children.Add(e);
         }
+
     }
 }

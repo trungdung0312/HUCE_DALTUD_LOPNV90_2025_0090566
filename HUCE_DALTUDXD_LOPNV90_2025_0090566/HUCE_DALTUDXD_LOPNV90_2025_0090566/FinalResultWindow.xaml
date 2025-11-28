@@ -58,7 +58,11 @@
             <!-- Panel vẽ mặt cắt – nằm trong Viewbox để auto-scale -->
             <Viewbox Grid.Column="1" Stretch="Uniform">
                 <Canvas x:Name="DrawArea" Width="600" Height="600" Background="White"/>
+               </Viewbox>
+            <Viewbox Grid.Column="1" Margin="10">
+                <Canvas x:Name="canvasSection" Width="300" Height="300"/>
             </Viewbox>
+
 
 
         </Grid>
