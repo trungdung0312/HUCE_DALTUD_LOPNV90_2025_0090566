@@ -26,16 +26,6 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566
             txtKQ3.Text = ketQuaDat ? "Kiểm tra điều kiện: ĐẠT (demo)"
                                     : "Kiểm tra điều kiện: KHÔNG ĐẠT (demo)";
 
-            // Hiển thị ảnh minh hoạ
-            string imgPath = "Assets/Images/bo tri cot.png";
-            try
-            {
-                imgTietDien.Source = new BitmapImage(new System.Uri(imgPath, System.UriKind.Relative));
-            }
-            catch
-            {
-
-            }
 
             // Nếu không đạt yêu cầu → cảnh báo
             if (!ketQuaDat)
@@ -55,6 +45,92 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        private void Redraw_Click(object sender, RoutedEventArgs e)
+        {
+            DrawSection();
+        }
+
+        private void DrawSection()
+        {
+            DrawArea.Children.Clear();
+
+            double X = double.Parse(txtWidth.Text);     // mm
+            double Y = double.Parse(txtHeight.Text);    // mm
+            int bars = int.Parse(txtBars.Text);
+            double dia = double.Parse(txtBarDia.Text);  // mm
+
+            double scale = 1.0; // mm → pixel tạm (có Viewbox nên không lo zoom)
+            double cover = 25 * scale;
+
+            double w = X * scale;
+            double h = Y * scale;
+
+            double left = 50;
+            double top = 50;
+
+            // Khung cột màu đen
+            Rectangle rec = new Rectangle
+            {
+                Width = w,
+                Height = h,
+                Stroke = Brushes.Black,
+                StrokeThickness = 3
+            };
+            Canvas.SetLeft(rec, left);
+            Canvas.SetTop(rec, top);
+            DrawArea.Children.Add(rec);
+
+            // Vẽ thép 4 góc + thép phân bố
+            DrawBars(left, top, w, h, bars, dia);
+        }
+
+        private void DrawBars(double left, double top, double w, double h, int barsPerSide, double dia)
+        {
+            double cover = 25;
+
+            // toạ độ 4 góc
+            double x1 = left + cover;
+            double x2 = left + w - cover;
+            double y1 = top + cover;
+            double y2 = top + h - cover;
+
+            double barRadius = dia / 2;
+
+            // hàng trên
+            for (int i = 0; i < barsPerSide; i++)
+            {
+                double x = x1 + i * (x2 - x1) / (barsPerSide - 1);
+                DrawBar(x, y1, barRadius);
+            }
+
+            // hàng dưới
+            for (int i = 0; i < barsPerSide; i++)
+            {
+                double x = x1 + i * (x2 - x1) / (barsPerSide - 1);
+                DrawBar(x, y2, barRadius);
+            }
+
+            // hàng trái + phải (không vẽ lại góc)
+            for (int i = 1; i < barsPerSide - 1; i++)
+            {
+                double y = y1 + i * (y2 - y1) / (barsPerSide - 1);
+                DrawBar(x1, y, barRadius);
+                DrawBar(x2, y, barRadius);
+            }
+        }
+
+        private void DrawBar(double x, double y, double r)
+        {
+            Ellipse e = new Ellipse
+            {
+                Width = r * 2,
+                Height = r * 2,
+                Fill = Brushes.Black
+            };
+            Canvas.SetLeft(e, x - r);
+            Canvas.SetTop(e, y - r);
+            DrawArea.Children.Add(e);
         }
     }
 }
