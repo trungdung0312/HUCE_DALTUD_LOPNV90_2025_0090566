@@ -60,6 +60,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="Converters\NumberToColorConverter.cs" />
+    <Compile Include="Model\ColumnInputData.cs" />
+    <Compile Include="ViewModel\ColumnInputViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -111,10 +118,7 @@
   <ItemGroup>
     <Resource Include="Assets\Images\bo tri cot.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>

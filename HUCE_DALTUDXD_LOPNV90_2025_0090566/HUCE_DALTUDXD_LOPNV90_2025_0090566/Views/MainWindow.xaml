@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="PHẦN MỀM THIẾT KẾ CỘT BTCT" 
         WindowStartupLocation="CenterScreen"
+<<<<<<< Updated upstream
         Height="650" Width="1100"
+=======
+        Height="750" Width="1280"
+>>>>>>> Stashed changes
         Icon="/Assets/Icons/icon_app.jpg">
     <Grid>
         <Grid.ColumnDefinitions>

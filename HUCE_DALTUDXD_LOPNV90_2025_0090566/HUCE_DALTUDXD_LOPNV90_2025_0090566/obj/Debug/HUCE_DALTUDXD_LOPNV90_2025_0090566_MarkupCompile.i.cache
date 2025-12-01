@@ -4,11 +4,16 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\DELL\Documents\GitHub\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\
+=======
+D:\ĐỒ ÁN LẬP TRÌNH\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\
+>>>>>>> Stashed changes
 HUCE_DALTUDXD_LOPNV90_2025_0090566
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 C:\Users\DELL\Documents\GitHub\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\App.xaml
 5-1813818721
@@ -26,4 +31,14 @@ Views\MainWindow.xaml;Views\Pages\ColumnInputPage.xaml;Views\Pages\FinalReportPa
 >>>>>>> Stashed changes
 
 True
+=======
+D:\ĐỒ ÁN LẬP TRÌNH\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\App.xaml
+5-1515901734
+
+14828270288
+13-38814620
+Views\MainWindow.xaml;Views\Pages\ColumnInputPage.xaml;Views\Pages\FinalReportPage.xaml;Views\Pages\RebarDesignPage.xaml;Views\Pages\ResultPreviewPage.xaml;
+
+False
+>>>>>>> Stashed changes
 
