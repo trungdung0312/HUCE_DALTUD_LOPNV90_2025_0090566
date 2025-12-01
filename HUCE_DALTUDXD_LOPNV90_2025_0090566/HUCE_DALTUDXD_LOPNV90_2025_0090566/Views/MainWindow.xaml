@@ -7,36 +7,64 @@
         mc:Ignorable="d"
         Title="PHẦN MỀM THIẾT KẾ CỘT BTCT" 
         WindowStartupLocation="CenterScreen"
-        Height="650" Width="1100"
+        Height="700" Width="1200"
         Icon="/Assets/Icons/icon_app.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
-            <!-- Sidebar -->
+            <!-- Cột Menu -->
             <ColumnDefinition Width="*"/>
-            <!-- Frame hiển thị Page -->
+            <!-- Cột Nội dung -->
         </Grid.ColumnDefinitions>
 
         <!-- SIDEBAR MENU -->
-        <StackPanel Background="#2C3E50" Grid.Column="0" Margin="15">
-            <TextBlock Text="MENU CHÍNH"
-                       Foreground="White"
-                       FontSize="18" FontWeight="Bold" Margin="10"/>
+        <Border Grid.Column="0" Background="#2C3E50" BorderBrush="Gray" BorderThickness="0,0,1,0">
+            <StackPanel Margin="10">
+                <!-- Tiêu đề Menu -->
+                <TextBlock Text="MENU CHÍNH"
+                           Foreground="White"
+                           FontSize="20" FontWeight="Bold" 
+                           HorizontalAlignment="Center"
+                           Margin="0,20,0,30"/>
 
-            <Button Content="1. Nhập dữ liệu cột" Margin="5" Height="40"
-                    Click="BtnInput_Click"/>
-            <Button Content="2. Kết quả sơ bộ" Margin="5" Height="40"
-                    Click="BtnResult_Click"/>
-            <Button Content="3. Thiết kế cốt thép" Margin="5" Height="40"
-                    Click="BtnRebar_Click"/>
-            <Button Content="4. Báo cáo cuối" Margin="5" Height="40"
-                    Click="BtnFinal_Click"/>
-            <Button Content="Thoát chương trình" Margin="5" Height="40"
-                    Click="BtnExit_Click"/>
-        </StackPanel>
+                <!-- Các nút bấm (Sử dụng Style MainButtonStyle từ App.xaml) -->
+                <!-- Margin: Trái, Trên, Phải, Dưới -->
+
+                <Button Content="1. Nhập dữ liệu cột" 
+                        Style="{StaticResource MainButtonStyle}"
+                        Margin="0,0,0,10"
+                        Click="BtnInput_Click"/>
+
+                <Button Content="2. Kết quả sơ bộ" 
+                        Style="{StaticResource MainButtonStyle}"
+                        Margin="0,0,0,10"
+                        Click="BtnResult_Click"/>
+
+                <Button Content="3. Thiết kế cốt thép" 
+                        Style="{StaticResource MainButtonStyle}"
+                        Margin="0,0,0,10"
+                        Click="BtnRebar_Click"/>
+
+                <Button Content="4. Báo cáo cuối" 
+                        Style="{StaticResource MainButtonStyle}"
+                        Margin="0,0,0,10"
+                        Click="BtnFinal_Click"/>
+
+                <!-- Dòng kẻ ngang phân cách -->
+                <Separator Background="Gray" Margin="0,20,0,20"/>
+
+                <Button Content="Thoát chương trình" 
+                        Style="{StaticResource MainButtonStyle}"
+                        Background="#C0392B" 
+                        Click="BtnExit_Click"/>
+            </StackPanel>
+        </Border>
 
         <!-- MAIN CONTENT FRAME -->
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-
+        <!-- ShowsNavigationUI="False" để ẩn thanh điều hướng mặc định của Frame -->
+        <Frame x:Name="MainFrame" 
+               Grid.Column="1" 
+               NavigationUIVisibility="Hidden"
+               Background="White"/>
     </Grid>
 </Window>

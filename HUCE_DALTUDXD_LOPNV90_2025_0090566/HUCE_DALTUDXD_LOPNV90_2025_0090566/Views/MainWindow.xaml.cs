@@ -15,29 +15,60 @@ using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages;
 
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        // --- KHAI BÁO CÁC TRANG (Singleton-like) ---
+        // Khai báo ở đây để giữ dữ liệu không bị mất khi chuyển trang
+        private ColumnInputPage _inputPage;
+        private ResultPreviewPage _resultPage;
+        private RebarDesignPage _rebarPage;
+        private FinalReportPage _reportPage;
+
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ColumnInputPage());
+
+            // Khởi tạo các trang 1 lần duy nhất
+            _inputPage = new ColumnInputPage();
+            _resultPage = new ResultPreviewPage();
+            _rebarPage = new RebarDesignPage();
+            _reportPage = new FinalReportPage();
+
+            // Mặc định hiển thị trang nhập liệu đầu tiên
+            MainFrame.Navigate(_inputPage);
         }
-        private void BtnInput_Click(object sender, RoutedEventArgs e) =>
-            MainFrame.Navigate(new ColumnInputPage());
 
-        private void BtnResult_Click(object sender, RoutedEventArgs e) =>
-            MainFrame.Navigate(new ResultPreviewPage());
+        // --- SỰ KIỆN CHUYỂN TRANG ---
 
-        private void BtnRebar_Click(object sender, RoutedEventArgs e) =>
-            MainFrame.Navigate(new RebarDesignPage());
+        private void BtnInput_Click(object sender, RoutedEventArgs e)
+        {
+            // Điều hướng đến trang đã khởi tạo sẵn
+            MainFrame.Navigate(_inputPage);
+        }
 
-        private void BtnFinal_Click(object sender, RoutedEventArgs e) =>
-            MainFrame.Navigate(new FinalReportPage());
+        private void BtnResult_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(_resultPage);
+        }
 
-        private void BtnExit_Click(object sender, RoutedEventArgs e) =>
-            Application.Current.Shutdown();
+        private void BtnRebar_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(_rebarPage);
+        }
+
+        private void BtnFinal_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(_reportPage);
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            // Hỏi người dùng trước khi thoát
+            if (MessageBox.Show("Bạn có chắc muốn thoát?", "Xác nhận",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
     }
 }
