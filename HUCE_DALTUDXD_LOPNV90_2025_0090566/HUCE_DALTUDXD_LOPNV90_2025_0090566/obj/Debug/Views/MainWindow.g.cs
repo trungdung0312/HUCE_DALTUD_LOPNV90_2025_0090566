@@ -1,6 +1,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/FinalResultWindow.g.cs
 ﻿#pragma checksum "..\..\FinalResultWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "5B477B9CADDFD14FA02375CE178B4FAFD6F202D2BAAAAB85B245C8CA2221D670"
 =======
@@ -12,6 +13,9 @@
 ========
 ﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "84A57DF3AFA1E1417C3FB9A12936490ADF6C715152DB3140D0AD0E07ABD863AA"
 >>>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+>>>>>>> Stashed changes
+=======
+﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "84A57DF3AFA1E1417C3FB9A12936490ADF6C715152DB3140D0AD0E07ABD863AA"
 >>>>>>> Stashed changes
 =======
 ﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "84A57DF3AFA1E1417C3FB9A12936490ADF6C715152DB3140D0AD0E07ABD863AA"
@@ -32,12 +36,16 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views;
 =======
 <<<<<<<< Updated upstream:Đồ án Lập trình - Copy - Copy/obj/Debug/View/Login.g.cs
 ========
 using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views;
 >>>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+>>>>>>> Stashed changes
+=======
+using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views;
 >>>>>>> Stashed changes
 =======
 using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views;
@@ -70,6 +78,7 @@ using System.Windows.Shell;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<<< Updated upstream:Đồ án Lập trình - Copy - Copy/obj/Debug/View/Login.g.cs
 namespace TinhtoancotBTCT.View {
@@ -98,6 +107,8 @@ namespace TinhtoancotBTCT.View {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
     
     
@@ -109,6 +120,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
         
         #line 39 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -207,6 +219,9 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 =======
         internal System.Windows.Controls.Frame MainFrame;
 >>>>>>> Stashed changes
+=======
+        internal System.Windows.Controls.Frame MainFrame;
+>>>>>>> Stashed changes
         
         #line default
         #line hidden
@@ -226,6 +241,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             System.Uri resourceLocater = new System.Uri("/HUCE_DALTUDXD_LOPNV90_2025_0090566;component/views/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\MainWindow.xaml"
@@ -239,6 +255,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
             
             #line 1 "..\..\..\Views\MainWindow.xaml"
 >>>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+>>>>>>> Stashed changes
+=======
+            System.Uri resourceLocater = new System.Uri("/HUCE_DALTUDXD_LOPNV90_2025_0090566;component/views/mainwindow.xaml", System.UriKind.Relative);
+            
+            #line 1 "..\..\..\Views\MainWindow.xaml"
 >>>>>>> Stashed changes
 =======
             System.Uri resourceLocater = new System.Uri("/HUCE_DALTUDXD_LOPNV90_2025_0090566;component/views/mainwindow.xaml", System.UriKind.Relative);
@@ -269,12 +290,15 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<<< Updated upstream:Đồ án Lập trình - Copy - Copy/obj/Debug/View/Login.g.cs
             
             #line 22 "..\..\..\View\Login.xaml"
             ((System.Windows.Controls.Border)(target)).MouseDown += new System.Windows.Input.MouseButtonEventHandler(this.Border_MouseDown);
 ========
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -302,8 +326,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -313,6 +340,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
             #line default
             #line hidden
             return;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -377,13 +405,18 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             case 4:
             
             #line 33 "..\..\..\Views\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.BtnFinal_Click);
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -400,7 +433,10 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -411,6 +447,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
             #line default
             #line hidden
             return;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -427,6 +464,10 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
             case 6:
             this.MainFrame = ((System.Windows.Controls.Frame)(target));
 >>>>>>> Stashed changes:HUCE_DALTUDXD_LOPNV90_2025_0090566/HUCE_DALTUDXD_LOPNV90_2025_0090566/obj/Debug/Views/MainWindow.g.cs
+=======
+            case 6:
+            this.MainFrame = ((System.Windows.Controls.Frame)(target));
+>>>>>>> Stashed changes
 =======
             case 6:
             this.MainFrame = ((System.Windows.Controls.Frame)(target));
