@@ -49,6 +49,12 @@ D:\ĐỒ ÁN LẬP TRÌNH\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUD_LOPNV90-2
 D:\ĐỒ ÁN LẬP TRÌNH\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\Views\Pages\RebarDesignPage.baml
 D:\ĐỒ ÁN LẬP TRÌNH\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUD_LOPNV90-2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\Views\Pages\ResultPreviewPage.baml
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
