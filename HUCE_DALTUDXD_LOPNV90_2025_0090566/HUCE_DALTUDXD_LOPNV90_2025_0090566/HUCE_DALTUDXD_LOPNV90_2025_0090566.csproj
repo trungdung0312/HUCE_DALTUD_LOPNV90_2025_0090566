@@ -62,7 +62,15 @@
     </Compile>
 
     <Compile Include="Converters\NumberToColorConverter.cs" />
+<<<<<<< Updated upstream
 
+=======
+    <Compile Include="Model\ColumnInputData.cs" />
+    <Compile Include="Model\RebarResultData.cs" />
+    <Compile Include="Services\Class1.csTcvnCalculationService.cs" />
+    <Compile Include="ViewModel\ColumnInputViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
