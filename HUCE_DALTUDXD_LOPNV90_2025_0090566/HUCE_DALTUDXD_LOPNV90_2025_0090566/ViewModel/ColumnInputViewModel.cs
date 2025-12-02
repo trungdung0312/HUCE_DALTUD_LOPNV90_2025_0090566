@@ -183,16 +183,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 
         private void ExecuteCalculate(object obj)
         {
-
             // 1. Lấy các cột được tích chọn
-=======
-            // Lấy danh sách các cột được tích chọn
-
             var selectedColumns = ColumnsList.Where(c => c.IsSelected).ToList();
 
             if (selectedColumns.Count == 0)
             {
-
                 MessageBox.Show("Bạn chưa chọn cột nào trong bảng!", "Thông báo");
                 return;
             }
@@ -210,14 +205,6 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 
             // 3. Hiển thị tạm thời (Sau này sẽ chuyển trang)
             MessageBox.Show(thongBao, "Kết quả");
-
-                MessageBox.Show("Vui lòng tích chọn ít nhất 1 cột trong bảng để tính toán!", "Chưa chọn cột");
-                return;
-            }
-
-            // Gửi thông điệp hoặc điều hướng (Phần này sẽ làm ở bài sau: Chuyển dữ liệu sang trang Kết quả)
-            MessageBox.Show($"Đang tính toán cho {selectedColumns.Count} cột...\n(Chức năng này sẽ chuyển sang trang Kết quả)", "Thông báo");
-
         }
 
         // Boilerplate MVVM
