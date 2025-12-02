@@ -28,19 +28,15 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             _viewModel = new RebarDesignViewModel();
             this.DataContext = _viewModel;
 
-            // Đăng ký sự kiện: Khi ViewModel thay đổi dữ liệu -> Vẽ lại hình
             _viewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
-        // Hàm nhận dữ liệu cột từ trang trước chuyển sang
         public void LoadColumnData(RebarResultData column)
         {
             _viewModel.DesignColumn = column;
-            // Vẽ lần đầu tiên
             DrawSection();
         }
 
-        // Khi số liệu thay đổi -> Vẽ lại
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(RebarDesignViewModel.DesignColumn))
@@ -49,6 +45,19 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             }
         }
 
+<<<<<<< HEAD
+=======
+        private void DetailCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            DrawSection();
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (NavigationService.CanGoBack) NavigationService.GoBack();
+        }
+
+>>>>>>> main
         // =================================================================
         // HÀM VẼ HÌNH CHÍNH (ĐÃ CHỈNH SỬA TỌA ĐỘ CHUẨN KỸ THUẬT)
         // =================================================================
@@ -183,21 +192,10 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
                 Stroke = Brushes.Black,
                 StrokeThickness = 1
             };
+            // Hàm này nhận x, y là toạ độ TÂM của chấm tròn
             Canvas.SetLeft(bar, x - size / 2);
             Canvas.SetTop(bar, y - size / 2);
             DetailCanvas.Children.Add(bar);
-        }
-
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            // Quay lại trang trước
-            if (NavigationService.CanGoBack) NavigationService.GoBack();
-        }
-
-        // Vẽ lại khi thay đổi kích thước cửa sổ
-        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            DrawSection();
         }
     }
 }
