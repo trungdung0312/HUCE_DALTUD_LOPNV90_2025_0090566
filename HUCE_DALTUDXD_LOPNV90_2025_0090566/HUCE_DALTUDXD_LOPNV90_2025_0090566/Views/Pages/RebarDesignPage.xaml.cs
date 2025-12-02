@@ -45,6 +45,8 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             }
         }
 
+<<<<<<< HEAD
+=======
         private void DetailCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             DrawSection();
@@ -55,6 +57,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             if (NavigationService.CanGoBack) NavigationService.GoBack();
         }
 
+>>>>>>> main
         // =================================================================
         // HÀM VẼ HÌNH CHÍNH (ĐÃ CHỈNH SỬA TỌA ĐỘ CHUẨN KỸ THUẬT)
         // =================================================================

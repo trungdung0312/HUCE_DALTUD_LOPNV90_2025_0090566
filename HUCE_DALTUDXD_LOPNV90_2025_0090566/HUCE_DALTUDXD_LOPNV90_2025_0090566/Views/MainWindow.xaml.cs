@@ -58,6 +58,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 
         private void BtnFinal_Click(object sender, RoutedEventArgs e)
         {
+            // Chuyển sang trang báo cáo
             MainFrame.Navigate(_reportPage);
         }
 
@@ -72,10 +73,13 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
         }
         public void ShowResults(System.Collections.Generic.List<HUCE_DALTUDXD_LOPNV90_2025_0090566.Model.RebarResultData> results)
         {
-            // 1. Đẩy dữ liệu vào trang kết quả
+            // Nạp dữ liệu vào trang Xem trước (Page 2)
             _resultPage.LoadData(results);
 
-            // 2. Điều hướng Frame sang trang kết quả
+            // QUAN TRỌNG: Nạp LUÔN dữ liệu vào trang Báo cáo (Page 4) để dành
+            _reportPage.LoadData(results);
+
+            // Chuyển người dùng đến trang Xem trước
             MainFrame.Navigate(_resultPage);
         }
         public void GoToRebarDesign(Model.RebarResultData selectedColumn)
