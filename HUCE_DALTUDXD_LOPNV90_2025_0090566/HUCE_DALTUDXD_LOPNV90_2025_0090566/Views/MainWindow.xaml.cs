@@ -78,6 +78,15 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
             // 2. Điều hướng Frame sang trang kết quả
             MainFrame.Navigate(_resultPage);
         }
+        public void GoToRebarDesign(Model.RebarResultData selectedColumn)
+        {
+            // 1. Gửi dữ liệu sang trang thiết kế
+            // (Chúng ta sẽ viết hàm LoadData cho trang này ở bước sau)
+            // _rebarPage.LoadColumn(selectedColumn); 
+
+            // 2. Chuyển trang
+            MainFrame.Navigate(_rebarPage);
+        }
     }
 
 }
