@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\columninputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\columninputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\services\\class1.cstcvncalculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\services\\class1.cstcvncalculationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Services\\Class1.csTcvnCalculationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\Services\\Class1.csTcvnCalculationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\model\\rebarresultdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\model\\rebarresultdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Model\\RebarResultData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\Model\\RebarResultData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,14 +40,10 @@
               "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
               "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAAANAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T01:09:39.126Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Services\\Class1.csTcvnCalculationService.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAkwHoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T01:08:32.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T01:08:32.245Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Model\\RebarResultData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T01:06:58.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T01:06:58.013Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml",
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-02T00:56:51.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T00:56:51.954Z"
             }
           ]
         }
