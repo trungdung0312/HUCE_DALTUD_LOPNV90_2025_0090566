@@ -65,6 +65,7 @@
     <Compile Include="Model\RebarResultData.cs" />
     <Compile Include="Services\TcvnCalculationService.cs" />
     <Compile Include="ViewModel\ColumnInputViewModel.cs" />
+    <Compile Include="ViewModel\RebarDesignViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ResultPreviewViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

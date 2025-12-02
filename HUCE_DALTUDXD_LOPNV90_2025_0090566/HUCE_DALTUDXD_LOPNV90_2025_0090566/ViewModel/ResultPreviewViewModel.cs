@@ -14,6 +14,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
     {
         // Danh sách chứa kết quả tính toán để hiện lên bảng
         public ObservableCollection<RebarResultData> ResultsList { get; set; }
+
         // Biến lưu trữ dòng đang được chọn trong bảng
         private RebarResultData _selectedResult;
         public RebarResultData SelectedResult
@@ -21,6 +22,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             get => _selectedResult;
             set { _selectedResult = value; OnPropertyChanged(); }
         }
+
         public ResultPreviewViewModel()
         {
             ResultsList = new ObservableCollection<RebarResultData>();

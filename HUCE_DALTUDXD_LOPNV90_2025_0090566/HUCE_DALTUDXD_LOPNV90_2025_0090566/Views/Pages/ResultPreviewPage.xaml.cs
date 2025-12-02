@@ -19,6 +19,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
 {
     public partial class ResultPreviewPage : Page
     {
+        // Giữ tham chiếu đến ViewModel để gọi hàm cập nhật
         private ResultPreviewViewModel _viewModel;
 
         public ResultPreviewPage()
@@ -28,11 +29,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             this.DataContext = _viewModel;
         }
 
+        // Hàm này sẽ được MainWindow gọi để đẩy dữ liệu vào
         public void LoadData(List<RebarResultData> data)
         {
             _viewModel.UpdateResults(data);
         }
-
         // --- SỰ KIỆN CHUYỂN TRANG ---
         private void BtnGoToDetail_Click(object sender, RoutedEventArgs e)
         {
