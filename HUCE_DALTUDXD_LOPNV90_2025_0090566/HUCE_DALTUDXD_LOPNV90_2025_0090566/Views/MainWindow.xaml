@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PHẦN MỀM THIẾT KẾ CỘT BTCT" 
         WindowStartupLocation="CenterScreen"
-        Height="700" Width="1200"
+        Height="750" Width="1280"
         Icon="/Assets/Icons/icon_app.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
