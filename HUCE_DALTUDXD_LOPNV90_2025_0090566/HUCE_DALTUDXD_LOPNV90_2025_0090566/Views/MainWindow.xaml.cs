@@ -70,5 +70,14 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
                 Application.Current.Shutdown();
             }
         }
+        public void ShowResults(System.Collections.Generic.List<HUCE_DALTUDXD_LOPNV90_2025_0090566.Model.RebarResultData> results)
+        {
+            // 1. Đẩy dữ liệu vào trang kết quả
+            _resultPage.LoadData(results);
+
+            // 2. Điều hướng Frame sang trang kết quả
+            MainFrame.Navigate(_resultPage);
+        }
     }
+
 }
