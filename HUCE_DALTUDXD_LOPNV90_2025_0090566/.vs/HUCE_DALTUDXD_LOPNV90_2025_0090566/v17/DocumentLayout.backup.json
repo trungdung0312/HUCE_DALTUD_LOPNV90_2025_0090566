@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\columninputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\columninputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\resultpreviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\resultpreviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\resultpreviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\rebardesignpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\rebardesignpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\rebardesignpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\views\\pages\\rebardesignpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\rebardesignviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\rebardesignviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,64 +46,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ResultPreviewPage.xaml.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:46:36.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ResultPreviewPage.xaml",
               "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml",
               "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml",
               "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml",
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\ResultPreviewPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-02T09:15:16.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-02T09:10:19.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ColumnInputViewModel.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
-              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
-              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ColumnInputViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T08:25:19.856Z",
+              "WhenOpened": "2025-12-02T09:45:23.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAIwFMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:42:38.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RebarDesignViewModel.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RebarDesignViewModel.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RebarDesignViewModel.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RebarDesignViewModel.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RebarDesignViewModel.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwGsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:38:46.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ResultPreviewViewModel.cs",
               "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
               "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
               "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAegSURBVFhH7VbbaxtXGv9mRmONRxfHkWzFF2yci52kpA5V6oewaXahJqZ/QJ\u002Bch2UXv5RCFwp5Th/7UtiHfehbqd8Wti2B1t7kYRengSVR1w2\u002ByHayjuSr7LFkaTSjkUYz09937HhbCiWBUBbWv/HReOac\u002Bc7vfHc6xjGOcYxj/G9DOrwfYXZrttN3/f6aW0t9v/09PS48pg1zgwzLoFKjRNTkvya16\u002B2UjCSpPdzueIGX1xwt/9nvP3NYhu/7YcMw\u002BuUWue/btW\u002B1L7Nf0v2t\u002B44iKfmaUcvPfTgXdzynv1Qrpb7IfkF3Vu7Qjr1TcMnNr36wWhBEDiEf3o/A5GSSx0B9QpKlCVmRxZ2fMT3hK/6EJOEZ/1OAZ8m/CSlXLN3ShQCgUqnoSqvyhkTSuCwdfC/78s3AC65E4hGdyWFuLJACMeeTz/LGQl6o/0DCfxHinyAI5PmdeV3zNb1QK5xves1rtmuP1pt18gOfVFklvUUHn8MrCCgWjlGkJUKaom2B8KqkSP9gzTE50zf7ak4tjeexcr2cangN/mYHw/Blf\u002BHRxqPz3fHua7VmbRT7CHkQ24qD5k7/5fQz1VRrS4\u002BWbPorecLEc4W5qF/301iQXjKW0vlyPl1ySkNmw6Rqo0qKrJAW0iishAlmImhFDH4PckzwU9/zP33v8ntR1tyetZee3Z5Nr5XXrjzdfxrLGlnKlXMmjpYB6czl1OWuwcRgWlO1IZ7jAaLLkPMIms1gfEcNyizdWjKFBllztmyncYpxnKp/aW9Jx6A2rY3awm3UG\u002BmlgRMD1B3rFtpUFZWcpiPI2w2bSZIru8Q\u002BRx6NseZATp/\u002Bz7S\u002BY\u002B2ItbAEu0Aa48Li3qK6Wl7VWRbP8QD5PhBLQtZFrJHUsLqIu6ngh67/4Xq8bJWvlhvl62uVtc7cfi4E01BPrIdwUia206F3LJxsPfnvaEt0GaZdDlFouRk0l7HxAjb6Vzgczg7EB3ToNoFDtiKwlLpXj0F8qOE3yHEdF5uvw5wrydak3Rvv1VLRVJRdCOv5AEUQXMVYgL/PSp60vPv33Zog\u002BPq7r8cQpemCXUhvV7djZacsNHUpdYlGekaor61vAcSmAj\u002B4E5JCGTh2ptFsZCA40/Sb3yGos/a\u002BbZzpPVOXAslwfGdTlVQd3/W3qq2tFadCe/aeic3vY/O/3Th9o/hW/1vJocRQD/tnwSoQ5DGxKbjOHagzWyvXjPI/y01h4kVjkZQA/oQLG7K6qV1r97uiXfbQySEbmsti2UwsFrvL638BnGYKO9WdNaSfAWjst2z\u002BJ8UnhEM52HwJfnv31rVbe/DlyyAtyM0WZsmUzAIO9zD7p\u002BxP9hBpxrANMqoG7Vq7fBKKh\u002BMEk9rIbxk3cCexZAp\u002Blee1vzYEQSaGREns0PAbQfBU9JQN9WfgzJOe500Vi8Wc\u002BOJXhjAxg00LCwuw/4VDYQ\u002BmNrM72cLo4GjxYOaXYZpmJydh0zLPP9t/Nogo1\u002BaNeTJqBue6MKwwGDSDtz\u002B\u002B//GZ1zpeS4WUEGHdQRQHQQqJ\u002B81zfz5Xe15xcrdzzlElQfQdXIc5TgxcL4PnFcL13ZsrpZX0N0\u002B/0R\u002BsPaBNc5M834sgUtMeeeMzazNjXy191f/1yte0YCxwDnyeZm78uOKwzCMGLXKL0BwT49BnjQqtvgRQTdqwyVloY7har3Y/KT1R85U8VeoVJqDifTeWDe87\u002B2fhOieWi8vCrVzP5T1PYP4cFg6TT90osSrLFAQ7Ih0U1\u002BJ0QjshKkWlURENwmZ1k/L2i8fGYSBN45CTvW29GaQT\u002B2rvVZFP8c7m9ASrTJ5Pnp8ePT2ae\u002BfsO3Sx4yLpqk6yLOcQ8dMgOEkKZdw61AoIH9RxqRoIwweZoFk3yWpY4tl1XV7yQrCKVr69vd3QNX1hODUcDHcOX3i49TDGJXO9sm7DxzLwwcmJNyYugXQSHdMgl0sUB/bDPDQ4BUtOIafbohYDguCF5AVBhvMgV5Bde5fvYSweTGiJtz\u002B6\u002B1HxXPs5OhU/hcPhUg4OwenJ8i0H\u002BSuv2mp\u002BYGCA86CT389TR2tHBv93oFSebFFaWHYJIwMF5Ea6R0KQMrPr7NYjakTIBB5Ce4tzH8z9pN06Isibsv89LT4VflG0ixEk6DTMksQpHXYGnufBhxHPMn5cKsF/ppvhpoG3oh9EGbMM08jIgYzwJQ0H4HrtQEN5q2LZnuLlUcqm8d0s5rmTIVSpApqRn6UykVi4Sa079XEIuIms3jeTm4kg\u002B4c7o53UGekUPoSyRalISpBikjCPcH7LtbYgRXQz7//m/U0h9RVC6Hb8j\u002BgrQxKUJRvocm2cV0/oiQQ7L1KGKOZov2jb2qaNysZBhw3zVt0quU23iihkp87c\u002B/yeKaS\u002BQgiCY9fHvGgiaoAhtzistX50GmeY3F5tT5DhiOakum6ui7zG2kPUsg2q6FYyqKWZB58/eOUEhYl/jLvZu2/Cv8ZqjdoIumya351/HjRCk2xe7geTWpK6Yl18LyHHTbmKO/XJ2CcvVHFeBj8jeO/xvRSFqR\u002BpIZUtZIlLFdow4lRh121SOP4QUMmWJPXEeyjRmnACOcgjteRu/\u002B62CJJjHOMYxzjG/w2IfgC9f0U15RZhIQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-12-02T08:17:24.158Z"
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T08:17:24.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RebarDesignPage.xaml",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-02T09:39:57.137Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
-              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAegSURBVFhH7VbbaxtXGv9mRmONRxfHkWzFF2yci52kpA5V6oewaXahJqZ/QJ\u002Bch2UXv5RCFwp5Th/7UtiHfehbqd8Wti2B1t7kYRengSVR1w2\u002ByHayjuSr7LFkaTSjkUYz09937HhbCiWBUBbWv/HReOac\u002Bc7vfHc6xjGOcYxj/G9DOrwfYXZrttN3/f6aW0t9v/09PS48pg1zgwzLoFKjRNTkvya16\u002B2UjCSpPdzueIGX1xwt/9nvP3NYhu/7YcMw\u002BuUWue/btW\u002B1L7Nf0v2t\u002B44iKfmaUcvPfTgXdzynv1Qrpb7IfkF3Vu7Qjr1TcMnNr36wWhBEDiEf3o/A5GSSx0B9QpKlCVmRxZ2fMT3hK/6EJOEZ/1OAZ8m/CSlXLN3ShQCgUqnoSqvyhkTSuCwdfC/78s3AC65E4hGdyWFuLJACMeeTz/LGQl6o/0DCfxHinyAI5PmdeV3zNb1QK5xves1rtmuP1pt18gOfVFklvUUHn8MrCCgWjlGkJUKaom2B8KqkSP9gzTE50zf7ak4tjeexcr2cangN/mYHw/Blf\u002BHRxqPz3fHua7VmbRT7CHkQ24qD5k7/5fQz1VRrS4\u002BWbPorecLEc4W5qF/301iQXjKW0vlyPl1ySkNmw6Rqo0qKrJAW0iishAlmImhFDH4PckzwU9/zP33v8ntR1tyetZee3Z5Nr5XXrjzdfxrLGlnKlXMmjpYB6czl1OWuwcRgWlO1IZ7jAaLLkPMIms1gfEcNyizdWjKFBllztmyncYpxnKp/aW9Jx6A2rY3awm3UG\u002BmlgRMD1B3rFtpUFZWcpiPI2w2bSZIru8Q\u002BRx6NseZATp/\u002Bz7S\u002BY\u002B2ItbAEu0Aa48Li3qK6Wl7VWRbP8QD5PhBLQtZFrJHUsLqIu6ngh67/4Xq8bJWvlhvl62uVtc7cfi4E01BPrIdwUia206F3LJxsPfnvaEt0GaZdDlFouRk0l7HxAjb6Vzgczg7EB3ToNoFDtiKwlLpXj0F8qOE3yHEdF5uvw5wrydak3Rvv1VLRVJRdCOv5AEUQXMVYgL/PSp60vPv33Zog\u002BPq7r8cQpemCXUhvV7djZacsNHUpdYlGekaor61vAcSmAj\u002B4E5JCGTh2ptFsZCA40/Sb3yGos/a\u002BbZzpPVOXAslwfGdTlVQd3/W3qq2tFadCe/aeic3vY/O/3Th9o/hW/1vJocRQD/tnwSoQ5DGxKbjOHagzWyvXjPI/y01h4kVjkZQA/oQLG7K6qV1r97uiXfbQySEbmsti2UwsFrvL638BnGYKO9WdNaSfAWjst2z\u002BJ8UnhEM52HwJfnv31rVbe/DlyyAtyM0WZsmUzAIO9zD7p\u002BxP9hBpxrANMqoG7Vq7fBKKh\u002BMEk9rIbxk3cCexZAp\u002Blee1vzYEQSaGREns0PAbQfBU9JQN9WfgzJOe500Vi8Wc\u002BOJXhjAxg00LCwuw/4VDYQ\u002BmNrM72cLo4GjxYOaXYZpmJydh0zLPP9t/Nogo1\u002BaNeTJqBue6MKwwGDSDtz\u002B\u002B//GZ1zpeS4WUEGHdQRQHQQqJ\u002B81zfz5Xe15xcrdzzlElQfQdXIc5TgxcL4PnFcL13ZsrpZX0N0\u002B/0R\u002BsPaBNc5M834sgUtMeeeMzazNjXy191f/1yte0YCxwDnyeZm78uOKwzCMGLXKL0BwT49BnjQqtvgRQTdqwyVloY7har3Y/KT1R85U8VeoVJqDifTeWDe87\u002B2fhOieWi8vCrVzP5T1PYP4cFg6TT90osSrLFAQ7Ih0U1\u002BJ0QjshKkWlURENwmZ1k/L2i8fGYSBN45CTvW29GaQT\u002B2rvVZFP8c7m9ASrTJ5Pnp8ePT2ae\u002BfsO3Sx4yLpqk6yLOcQ8dMgOEkKZdw61AoIH9RxqRoIwweZoFk3yWpY4tl1XV7yQrCKVr69vd3QNX1hODUcDHcOX3i49TDGJXO9sm7DxzLwwcmJNyYugXQSHdMgl0sUB/bDPDQ4BUtOIafbohYDguCF5AVBhvMgV5Bde5fvYSweTGiJtz\u002B6\u002B1HxXPs5OhU/hcPhUg4OwenJ8i0H\u002BSuv2mp\u002BYGCA86CT389TR2tHBv93oFSebFFaWHYJIwMF5Ea6R0KQMrPr7NYjakTIBB5Ce4tzH8z9pN06Isibsv89LT4VflG0ixEk6DTMksQpHXYGnufBhxHPMn5cKsF/ppvhpoG3oh9EGbMM08jIgYzwJQ0H4HrtQEN5q2LZnuLlUcqm8d0s5rmTIVSpApqRn6UykVi4Sa079XEIuIms3jeTm4kg\u002B4c7o53UGekUPoSyRalISpBikjCPcH7LtbYgRXQz7//m/U0h9RVC6Hb8j\u002BgrQxKUJRvocm2cV0/oiQQ7L1KGKOZov2jb2qaNysZBhw3zVt0quU23iihkp87c\u002B/yeKaS\u002BQgiCY9fHvGgiaoAhtzistX50GmeY3F5tT5DhiOakum6ui7zG2kPUsg2q6FYyqKWZB58/eOUEhYl/jLvZu2/Cv8ZqjdoIumya351/HjRCk2xe7geTWpK6Yl18LyHHTbmKO/XJ2CcvVHFeBj8jeO/xvRSFqR\u002BpIZUtZIlLFdow4lRh121SOP4QUMmWJPXEeyjRmnACOcgjteRu/\u002B62CJJjHOMYxzjG/w2IfgC9f0U15RZhIQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-12-02T08:17:19.482Z"
+              "Title": "RebarDesignPage.xaml.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\Views\\Pages\\RebarDesignPage.xaml.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAwwIEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:41:40.635Z",
+              "EditorCaption": ""
             }
           ]
         }
