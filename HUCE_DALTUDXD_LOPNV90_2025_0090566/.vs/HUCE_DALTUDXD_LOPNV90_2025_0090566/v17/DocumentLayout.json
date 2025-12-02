@@ -14,12 +14,17 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\Model\\RebarResultData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\Model\\RebarResultData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+=======
+      "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
 =======
       "AbsoluteMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|d:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\huce_daltud_lopnv90_2025_0090566\\huce_daltud_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FD75C7-9DC1-4EC4-BA6F-444D70469E59}|HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566.csproj|solutionrelative:huce_daltudxd_lopnv90_2025_0090566\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -58,7 +63,11 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAJQAAAAAAAAAAAAowLIAAAAuAAAAAAAAAA==",
+>>>>>>> Stashed changes
 =======
               "ViewState": "AgIAAJQAAAAAAAAAAAAowLIAAAAuAAAAAAAAAA==",
 >>>>>>> Stashed changes
@@ -75,6 +84,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -112,6 +122,15 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
 >>>>>>> Stashed changes
+=======
+              "Title": "ResultPreviewViewModel.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\ResultPreviewViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+>>>>>>> Stashed changes
               "WhenOpened": "2025-12-02T08:17:24.158Z",
               "EditorCaption": ""
 >>>>>>> Stashed changes
@@ -119,6 +138,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -141,6 +161,17 @@
               "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-02T00:56:51.954Z"
+=======
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
+              "RelativeToolTip": "HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T08:17:19.482Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
 =======
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N L\u1EACP TR\u00CCNH\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\HUCE_DALTUDXD_LOPNV90_2025_0090566\\ViewModel\\RelayCommand.cs",
