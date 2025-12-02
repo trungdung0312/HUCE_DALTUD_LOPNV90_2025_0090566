@@ -63,7 +63,7 @@
     <Compile Include="Converters\NumberToColorConverter.cs" />
     <Compile Include="Model\ColumnInputData.cs" />
     <Compile Include="Model\RebarResultData.cs" />
-    <Compile Include="Services\Class1.csTcvnCalculationService.cs" />
+    <Compile Include="Services\TcvnCalculationService.cs" />
     <Compile Include="ViewModel\ColumnInputViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ResultPreviewViewModel.cs" />
