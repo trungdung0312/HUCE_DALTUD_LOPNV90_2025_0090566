@@ -185,11 +185,15 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
             // 1. Lấy các cột được tích chọn
 =======
             // Lấy danh sách các cột được tích chọn
 
+=======
+            // 1. Lấy cột đã chọn
+>>>>>>> Stashed changes
 =======
             // 1. Lấy cột đã chọn
 >>>>>>> Stashed changes
@@ -202,8 +206,12 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
                 MessageBox.Show("Bạn chưa chọn cột nào trong bảng!", "Thông báo");
+=======
+                MessageBox.Show("Vui lòng tích chọn ít nhất 1 cột trong bảng để tính toán!", "Chưa chọn cột");
+>>>>>>> Stashed changes
 =======
                 MessageBox.Show("Vui lòng tích chọn ít nhất 1 cột trong bảng để tính toán!", "Chưa chọn cột");
 >>>>>>> Stashed changes
@@ -223,6 +231,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // 3. Hiển thị tạm thời (Sau này sẽ chuyển trang)
             MessageBox.Show(thongBao, "Kết quả");
 
@@ -236,6 +245,8 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             // 3. CHUYỂN TRANG (SỬA ĐOẠN NÀY)
             // Tìm cửa sổ MainWindow đang chạy
             var mainWindow = Application.Current.MainWindow as Views.MainWindow;
@@ -246,6 +257,9 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
                 mainWindow.ShowResults(results);
             }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
