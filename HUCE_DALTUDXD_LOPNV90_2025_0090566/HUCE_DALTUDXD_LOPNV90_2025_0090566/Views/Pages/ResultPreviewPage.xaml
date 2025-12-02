@@ -5,13 +5,48 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ResultPreviewPage">
+      Title="Kết quả sơ bộ"
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Background="White">
 
-    <Grid Margin="30">
-        <TextBlock Text="KẾT QUẢ SƠ BỘ" 
-                   FontSize="28" 
-                   FontWeight="Bold" 
-                   Margin="10"/>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="BẢNG KẾT QUẢ TÍNH TOÁN &amp; CHỌN THÉP" 
+                   FontSize="22" FontWeight="Bold" Foreground="#2C3E50" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <DataGrid Grid.Row="1" ItemsSource="{Binding ResultsList}" AutoGenerateColumns="False"
+                  CanUserAddRows="False" IsReadOnly="True"
+                  BorderBrush="#999999" BorderThickness="1"
+                  RowHeight="40" FontSize="14" AlternatingRowBackground="#F0F8FF"
+                  HeadersVisibility="Column">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tên Cột" Binding="{Binding ColumnName}" FontWeight="Bold" Width="80"/>
+                <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}" Width="50"/>
+                <DataGridTextColumn Header="h" Binding="{Binding H}" Width="50"/>
+
+                <DataGridTextColumn Header="Độ mảnh λ" Binding="{Binding Lambda, StringFormat=N1}" Width="80"/>
+                <DataGridTextColumn Header="Hệ số η" Binding="{Binding Eta, StringFormat=N2}" Width="60"/>
+                <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="70"/>
+
+                <DataGridTextColumn Header="As Yêu Cầu (mm2)" Binding="{Binding As_Required, StringFormat=N0}" 
+                                    Foreground="Red" FontWeight="SemiBold" Width="140"/>
+
+                <DataGridTextColumn Header="CHỌN THÉP" Binding="{Binding ResultString}" 
+                                    Foreground="Blue" FontWeight="Bold" Width="120"/>
+
+                <DataGridTextColumn Header="As Chọn (mm2)" Binding="{Binding As_Provided, StringFormat=N0}" Width="120"/>
+
+                <DataGridTextColumn Header="Hàm lượng μ%" Binding="{Binding Mu_Percentage, StringFormat=N2}" Width="100"/>
+
+                <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Ghi chú" Binding="{Binding Note}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

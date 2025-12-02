@@ -12,17 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HUCE_DALTUDXD_LOPNV90_2025_0090566.Model;
+using HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel;
 
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
 {
-    /// <summary>
-    /// Interaction logic for ResultPreviewPage.xaml
-    /// </summary>
     public partial class ResultPreviewPage : Page
     {
+        // Giữ tham chiếu đến ViewModel để gọi hàm cập nhật
+        private ResultPreviewViewModel _viewModel;
+
         public ResultPreviewPage()
         {
             InitializeComponent();
+            _viewModel = new ResultPreviewViewModel();
+            this.DataContext = _viewModel;
+        }
+
+        // Hàm này sẽ được MainWindow gọi để đẩy dữ liệu vào
+        public void LoadData(List<RebarResultData> data)
+        {
+            _viewModel.UpdateResults(data);
         }
     }
 }

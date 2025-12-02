@@ -183,31 +183,37 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 
         private void ExecuteCalculate(object obj)
         {
+<<<<<<< Updated upstream
 
             // 1. Lấy các cột được tích chọn
 =======
             // Lấy danh sách các cột được tích chọn
 
+=======
+            // 1. Lấy cột đã chọn
+>>>>>>> Stashed changes
             var selectedColumns = ColumnsList.Where(c => c.IsSelected).ToList();
 
             if (selectedColumns.Count == 0)
             {
+<<<<<<< Updated upstream
 
                 MessageBox.Show("Bạn chưa chọn cột nào trong bảng!", "Thông báo");
+=======
+                MessageBox.Show("Vui lòng tích chọn ít nhất 1 cột trong bảng để tính toán!", "Chưa chọn cột");
+>>>>>>> Stashed changes
                 return;
             }
 
-            // 2. Tính toán từng cột
-            string thongBao = "KẾT QUẢ TÍNH TOÁN SƠ BỘ:\n\n";
-
+            // 2. Tính toán (Giữ nguyên phần này)
+            var results = new List<RebarResultData>();
             foreach (var col in selectedColumns)
             {
-                // Gọi Service tính toán
-                var ketQua = Services.TcvnCalculationService.CalculateColumn(col);
-
-                thongBao += $"{ketQua.ColumnName}: {ketQua.ResultString} (As={Math.Round(ketQua.As_Required, 0)} mm2)\n";
+                var res = Services.TcvnCalculationService.CalculateColumn(col);
+                results.Add(res);
             }
 
+<<<<<<< Updated upstream
             // 3. Hiển thị tạm thời (Sau này sẽ chuyển trang)
             MessageBox.Show(thongBao, "Kết quả");
 
@@ -218,6 +224,17 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             // Gửi thông điệp hoặc điều hướng (Phần này sẽ làm ở bài sau: Chuyển dữ liệu sang trang Kết quả)
             MessageBox.Show($"Đang tính toán cho {selectedColumns.Count} cột...\n(Chức năng này sẽ chuyển sang trang Kết quả)", "Thông báo");
 
+=======
+            // 3. CHUYỂN TRANG (SỬA ĐOẠN NÀY)
+            // Tìm cửa sổ MainWindow đang chạy
+            var mainWindow = Application.Current.MainWindow as Views.MainWindow;
+
+            if (mainWindow != null)
+            {
+                // Gọi hàm chuyển trang và truyền dữ liệu
+                mainWindow.ShowResults(results);
+            }
+>>>>>>> Stashed changes
         }
 
         // Boilerplate MVVM
