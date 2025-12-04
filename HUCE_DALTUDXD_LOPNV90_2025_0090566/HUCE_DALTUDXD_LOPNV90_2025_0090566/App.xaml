@@ -3,8 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HUCE_DALTUDXD_LOPNV90_2025_0090566"
 <<<<<<< HEAD
+<<<<<<< HEAD
              StartupUri="Views/Pages/MainWindow.xaml">
 =======
+=======
+>>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
              xmlns:converters="clr-namespace:HUCE_DALTUDXD_LOPNV90_2025_0090566.Converters"
              StartupUri="Views/MainWindow.xaml">
 >>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df

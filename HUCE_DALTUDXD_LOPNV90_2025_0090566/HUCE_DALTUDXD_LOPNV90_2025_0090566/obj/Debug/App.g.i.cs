@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\App.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "AFA003E05D50F7564B008DF84114833C2212B123A42403A7804C8C403E574189"
+=======
+﻿#pragma checksum "..\..\App.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "2F4C34C25BE82EC40D6CA2D100A6CBA593ED01C6D1DD4A19C82E943B21268A45"
+>>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
 =======
 ﻿#pragma checksum "..\..\App.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "2F4C34C25BE82EC40D6CA2D100A6CBA593ED01C6D1DD4A19C82E943B21268A45"
 >>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
@@ -59,12 +63,22 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566 {
             _contentLoaded = true;
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             #line 5 "..\..\App.xaml"
             this.StartupUri = new System.Uri("Views/Pages/MainWindow.xaml", System.UriKind.Relative);
 =======
+=======
+>>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
             #line 6 "..\..\App.xaml"
             this.StartupUri = new System.Uri("Views/MainWindow.xaml", System.UriKind.Relative);
 >>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
+            
+            #line default
+            #line hidden
+            System.Uri resourceLocater = new System.Uri("/HUCE_DALTUDXD_LOPNV90_2025_0090566;component/app.xaml", System.UriKind.Relative);
+            
+            #line 1 "..\..\App.xaml"
+            System.Windows.Application.LoadComponent(this, resourceLocater);
             
             #line default
             #line hidden

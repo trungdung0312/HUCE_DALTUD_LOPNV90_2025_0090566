@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "84A57DF3AFA1E1417C3FB9A12936490ADF6C715152DB3140D0AD0E07ABD863AA"
+=======
+﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "64D69E34C8CE87E477393DA074906DF1D669F8C0F60697AB104D46937D8596F7"
+>>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
 =======
 ﻿#pragma checksum "..\..\..\Views\MainWindow.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "64D69E34C8CE87E477393DA074906DF1D669F8C0F60697AB104D46937D8596F7"
 >>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
@@ -109,7 +113,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views {
             case 4:
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             #line 33 "..\..\..\Views\MainWindow.xaml"
+=======
+            #line 51 "..\..\..\Views\MainWindow.xaml"
+>>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
 =======
             #line 51 "..\..\..\Views\MainWindow.xaml"
 >>>>>>> 1665ceec3c26d7a8fb1248a544601e45c2b3e0df
