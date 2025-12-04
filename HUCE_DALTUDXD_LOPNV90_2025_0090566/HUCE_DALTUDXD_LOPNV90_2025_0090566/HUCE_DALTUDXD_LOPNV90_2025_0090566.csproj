@@ -60,6 +60,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+
+    <Compile Include="Converters\NumberToColorConverter.cs" />
+
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -106,10 +109,7 @@
     <Resource Include="Assets\Icons\icon_app.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Images\login_image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Images\bo tri cot.png" />
+    <Resource Include="Assets\Images\hinhnen.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
