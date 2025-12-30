@@ -188,7 +188,6 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Services
                 int n_total = n_side * 2;
                 double As_prov = n_total * area1;
                 double diff = As_prov - As_Total_Req;
-
                 if (diff >= 0 && diff < minDiff)
                 {
                     minDiff = diff;

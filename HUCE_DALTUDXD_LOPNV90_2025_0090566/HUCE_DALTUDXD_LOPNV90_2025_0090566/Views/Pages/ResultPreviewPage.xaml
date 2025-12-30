@@ -73,14 +73,15 @@
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                            <Style.Triggers>
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    <Style.Triggers>
                                 <DataTrigger Binding="{Binding Status}" Value="Đạt">
                                     <Setter Property="Foreground" Value="Green"/>
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding Status}" Value="Không đạt">
                                     <Setter Property="Foreground" Value="Red"/>
                                 </DataTrigger>
+
                                 <DataTrigger Binding="{Binding Status}" Value="Mất ổn định">
                                     <Setter Property="Foreground" Value="#E67E22"/>
                                 </DataTrigger>
@@ -91,6 +92,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
+
 
                 <DataGridTextColumn Header="Ghi chú" Binding="{Binding Note}" Width="*">
                     <DataGridTextColumn.ElementStyle>

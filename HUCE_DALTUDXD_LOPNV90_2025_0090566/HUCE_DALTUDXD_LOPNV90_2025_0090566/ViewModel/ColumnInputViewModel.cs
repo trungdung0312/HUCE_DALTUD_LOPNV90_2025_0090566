@@ -211,6 +211,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
                 return;
             }
 
+
             // 2. Gọi Service tính toán 
             var results = new List<RebarResultData>();
             foreach (var col in selectedColumns)
