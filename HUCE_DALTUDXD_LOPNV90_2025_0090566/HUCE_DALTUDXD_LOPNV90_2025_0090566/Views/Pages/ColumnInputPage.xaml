@@ -6,227 +6,234 @@
       xmlns:local="clr-namespace:HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages"
       mc:Ignorable="d" 
       Title="Nhập dữ liệu đầu vào"
-      d:DesignHeight="750" d:DesignWidth="1280"
+      d:DesignHeight="720" d:DesignWidth="1060"
       Background="White">
 
     <Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="380" MinWidth="300" MaxWidth="550"/>
-            <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <Border Grid.Column="0" BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="5" Background="#FAFAFA">
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10">
-                <StackPanel>
-                    <TextBlock Text="THÔNG TIN CỘT" FontSize="18" FontWeight="Bold" Foreground="#2C3E50" Margin="0,0,0,15"/>
+        <Border Grid.Row="0" BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="3" Background="#F8F9FA" Padding="10" Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="340"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Tên cột / Số hiệu (VD: C1, C2...):" Style="{StaticResource LabelStyle}"/>
-                    <TextBox Text="{Binding CurrentColumn.ColumnName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                             Style="{StaticResource InputTextBoxStyle}" FontWeight="Bold"/>
+                <GroupBox Grid.Column="0" Header="1. THÔNG TIN &amp; HÌNH HỌC" BorderBrush="#95A5A6" FontWeight="SemiBold">
+                    <StackPanel Margin="5">
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Tên Cột:" VerticalAlignment="Center"/>
+                            <TextBox Grid.Column="1" Text="{Binding CurrentColumn.ColumnName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                                     Style="{StaticResource InputTextBoxStyle}" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                        </Grid>
 
-                    <GroupBox Header="I. Vật liệu &amp; Cấu tạo" Margin="0,0,0,10" Padding="5" BorderBrush="#AAAAAA">
-                        <StackPanel>
-                            <Grid Margin="0,5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="80"/>
-                                </Grid.ColumnDefinitions>
-                                <StackPanel>
-                                    <TextBlock Text="Cấp độ bền Bê tông:"/>
-                                    <ComboBox ItemsSource="{Binding ConcreteGrades}" 
-                                              SelectedItem="{Binding CurrentColumn.ConcreteGrade}"
-                                              Height="30" Margin="0,0,5,0" VerticalContentAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1">
-                                    <TextBlock Text="Rb (MPa):"/>
-                                    <TextBox Text="{Binding CurrentColumn.Rb}" IsReadOnly="True" Background="#E8E8E8" Height="30" VerticalContentAlignment="Center" FontWeight="SemiBold"/>
-                                </StackPanel>
-                            </Grid>
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Tiết diện (mm):" VerticalAlignment="Center" FontSize="11"/>
 
-                            <Grid Margin="0,5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="80"/>
-                                </Grid.ColumnDefinitions>
-                                <StackPanel>
-                                    <TextBlock Text="Mác thép chủ:"/>
-                                    <ComboBox ItemsSource="{Binding SteelGrades}" 
-                                              SelectedItem="{Binding CurrentColumn.SteelGrade}"
-                                              Height="30" Margin="0,0,5,0" VerticalContentAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1">
-                                    <TextBlock Text="Rs (MPa):"/>
-                                    <TextBox Text="{Binding CurrentColumn.Rs}" IsReadOnly="True" Background="#E8E8E8" Height="30" VerticalContentAlignment="Center" FontWeight="SemiBold"/>
-                                </StackPanel>
-                            </Grid>
+                            <TextBox Grid.Column="1" Text="{Binding CurrentColumn.B, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" 
+                                     Style="{StaticResource InputTextBoxStyle}" ToolTip="Chiều rộng b (mm)"/>
 
-                            <TextBlock Text="Lớp bảo vệ cốt thép a (mm):" Margin="0,5,0,0"/>
-                            <TextBox Text="{Binding CurrentColumn.ConcreteCover, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
-                                     Style="{StaticResource InputTextBoxStyle}"/>
-                        </StackPanel>
-                    </GroupBox>
+                            <TextBlock Grid.Column="2" Text="x" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                    <GroupBox Header="II. Kích thước hình học" Margin="0,0,0,10" Padding="5" BorderBrush="#AAAAAA">
+                            <TextBox Grid.Column="3" Text="{Binding CurrentColumn.H, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" 
+                                     Style="{StaticResource InputTextBoxStyle}" ToolTip="Chiều cao h (mm)"/>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Chiều dài L (mm):" VerticalAlignment="Center" FontSize="11"/>
+                            <TextBox Grid.Column="1" Text="{Binding CurrentColumn.L, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" 
+                                     Style="{StaticResource InputTextBoxStyle}" ToolTip="Chiều dài tính toán L0 (mm)"/>
+                        </Grid>
+
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-
-                            <StackPanel Margin="0,0,5,5">
-                                <TextBlock Text="Rộng b (mm):"/>
-                                <TextBox Text="{Binding CurrentColumn.B, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
-                                         Style="{StaticResource InputTextBoxStyle}"/>
-                            </StackPanel>
-
-                            <StackPanel Grid.Column="1" Margin="5,0,0,5">
-                                <TextBlock Text="Cao h (mm):"/>
-                                <TextBox Text="{Binding CurrentColumn.H, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
-                                         Style="{StaticResource InputTextBoxStyle}"/>
-                            </StackPanel>
-
-                            <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
-                                <TextBlock Text="Chiều dài cột L (mm):"/>
-                                <TextBox Text="{Binding CurrentColumn.L, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
-                                         Style="{StaticResource InputTextBoxStyle}"/>
-                            </StackPanel>
+                            <TextBlock Text="Hệ số ψ:" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding PsiOptions}"
+                                      SelectedValue="{Binding CurrentColumn.Psi}"
+                                      DisplayMemberPath="Name"
+                                      SelectedValuePath="Value"
+                                      Height="26" VerticalContentAlignment="Center"/>
                         </Grid>
-                    </GroupBox>
+                    </StackPanel>
+                </GroupBox>
 
-                    <GroupBox Header="III. Nội lực &amp; Điều kiện biên" Margin="0,0,0,15" Padding="5" BorderBrush="#AAAAAA">
-                        <StackPanel>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
+                <GroupBox Grid.Column="2" Header="2. VẬT LIỆU &amp; CẤU TẠO" BorderBrush="#95A5A6" FontWeight="SemiBold">
+                    <StackPanel Margin="5">
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="65"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Bê tông:" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding ConcreteGrades}" 
+                                      SelectedItem="{Binding CurrentColumn.ConcreteGrade}" Height="26"/>
+                            <TextBox Grid.Column="3" Text="{Binding CurrentColumn.Rb}" IsReadOnly="True" Background="#EEE" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" ToolTip="Cường độ Rb (MPa)"/>
+                        </Grid>
 
-                                <StackPanel Margin="0,0,5,0">
-                                    <TextBlock Text="Lực dọc N (kN):"/>
-                                    <TextBox Text="{Binding CurrentColumn.N, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
-                                             Style="{StaticResource InputTextBoxStyle}"
-                                             Foreground="{Binding CurrentColumn.N, Converter={StaticResource NumberToColorConverter}}"/>
-                                </StackPanel>
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="65"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Thép Chủ:" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding SteelGrades}" 
+                                      SelectedItem="{Binding CurrentColumn.SteelGrade}" Height="26"/>
+                            <TextBox Grid.Column="3" Text="{Binding CurrentColumn.Rs}" IsReadOnly="True" Background="#EEE" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" ToolTip="Cường độ Rs (MPa)"/>
+                        </Grid>
 
-                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
-                                    <TextBlock Text="Liên kết 2 đầu (ψ):"/>
-                                    <ComboBox ItemsSource="{Binding PsiOptions}"
-                                              SelectedValue="{Binding CurrentColumn.Psi}"
-                                              DisplayMemberPath="Name"
-                                              SelectedValuePath="Value"
-                                              Height="30" Margin="0,0,0,15" VerticalContentAlignment="Center"/>
-                                </StackPanel>
-                            </Grid>
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="65"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Cốt Đai:" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding StirrupGrades}" 
+                                      SelectedItem="{Binding CurrentColumn.StirrupGrade}" Height="26"/>
+                            <ComboBox Grid.Column="3" ItemsSource="{Binding StirrupDiameters}"
+                                      SelectedItem="{Binding CurrentColumn.StirrupDiameter}" Height="26" ToolTip="Đường kính đai"/>
+                            <TextBox Grid.Column="5" Text="{Binding CurrentColumn.Rsw}" IsReadOnly="True" Background="#EEE" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" ToolTip="Cường độ Rsw (MPa)"/>
+                        </Grid>
 
-                            <Grid Margin="0,5,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <StackPanel Margin="0,0,5,0">
-                                    <TextBlock Text="Mô men Mx (kNm):"/>
-                                    <TextBox Text="{Binding CurrentColumn.Mx, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource InputTextBoxStyle}"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
-                                    <TextBlock Text="Mô men My (kNm):"/>
-                                    <TextBox Text="{Binding CurrentColumn.My, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource InputTextBoxStyle}"/>
-                                </StackPanel>
-                            </Grid>
-                        </StackPanel>
-                    </GroupBox>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65"/>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Lớp a (mm):" VerticalAlignment="Center" FontSize="11"/>
+                            <TextBox Grid.Column="1" Text="{Binding CurrentColumn.ConcreteCover, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                     Style="{StaticResource InputTextBoxStyle}" ToolTip="Lớp bảo vệ (mm)"/>
 
-                    <Grid>
+                            <CheckBox Grid.Column="3" IsChecked="{Binding CurrentColumn.IsVerticalPouring}" VerticalAlignment="Center">
+                                <TextBlock Text="Đổ cao > 1.5m" FontStyle="Italic" Foreground="#C0392B" FontSize="11"/>
+                            </CheckBox>
+                        </Grid>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Grid.Column="4" Header="3. NỘI LỰC (TTGH 1)" BorderBrush="#2980B9" FontWeight="SemiBold">
+                    <Grid Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Content="THÊM VÀO BẢNG" Command="{Binding AddColumnCommand}" 
-                                Background="#27AE60" Style="{StaticResource MainButtonStyle}" 
-                                Margin="0,0,10,0"/>
-                        <Button Grid.Column="1" Content="LƯU CHỈNH SỬA" Command="{Binding UpdateColumnCommand}" 
-                                Background="#F39C12" Style="{StaticResource MainButtonStyle}" 
-                                Margin="10,0,0,0"/>
-                    </Grid>
 
-                    <Button Content="Xóa trắng Form (Tạo mới)" Command="{Binding ClearFormCommand}" Margin="0,15,0,0" Height="30" Background="Transparent" Foreground="#555555" BorderThickness="0">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="Button">
-                                            <TextBlock Text="{TemplateBinding Content}" TextDecorations="Underline" Cursor="Hand" HorizontalAlignment="Center"/>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                </StackPanel>
-            </ScrollViewer>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="TOÀN BỘ" HorizontalAlignment="Center" Foreground="#C0392B" FontSize="10" FontWeight="Bold" Margin="0,0,0,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="3" Text="DÀI HẠN" HorizontalAlignment="Center" Foreground="#2980B9" FontSize="10" FontWeight="Bold" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Lực N (kN):" VerticalAlignment="Center" FontSize="11"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CurrentColumn.N, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}" Margin="0,0,0,8" FontWeight="Bold"/>
+                        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding CurrentColumn.N_LongTerm, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}" Margin="0,0,0,8"/>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Mx (kNm):" VerticalAlignment="Center" FontSize="11"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CurrentColumn.Mx, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}" Margin="0,0,0,8"/>
+                        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding CurrentColumn.Mx_LongTerm, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}" Margin="0,0,0,8"/>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="My (kNm):" VerticalAlignment="Center" FontSize="11"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding CurrentColumn.My, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}"/>
+                        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding CurrentColumn.My_LongTerm, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" 
+                                 Style="{StaticResource InputTextBoxStyle}"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
         </Border>
 
-        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#E0E0E0" ShowsPreview="True"/>
+        <DataGrid Grid.Row="1" 
+                  ItemsSource="{Binding ColumnsList}" 
+                  SelectedItem="{Binding SelectedColumnInGrid}"
+                  AutoGenerateColumns="False" CanUserAddRows="False"
+                  GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#AAAAAA"
+                  AlternatingRowBackground="#F9F9F9" RowHeight="30" FontSize="13" HeadersVisibility="Column"
+                  Margin="0,0,0,10">
 
-        <Grid Grid.Column="2" Margin="10,0,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" Header="Chọn" Width="40"/>
+                <DataGridTextColumn Header="Tên Cột" Binding="{Binding ColumnName}" Width="70" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Tiết diện (mm)" Binding="{Binding B, StringFormat='{}{0}x'}"/>
+                <DataGridTextColumn Header="h (mm)" Binding="{Binding H}" Width="60"/>
+                <DataGridTextColumn Header="L (mm)" Binding="{Binding L}" Width="60"/>
+                <DataGridTextColumn Header="Bê tông" Binding="{Binding ConcreteGrade}" Width="60"/>
+                <DataGridTextColumn Header="Thép Chủ" Binding="{Binding SteelGrade}" Width="80"/>
+                <DataGridTextColumn Header="Thép Đai" Binding="{Binding StirrupGrade}" Width="70"/>
+                <DataGridTextColumn Header="Φ Đai" Binding="{Binding StirrupDiameter}" Width="50"/>
+                <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="70" FontWeight="SemiBold"/>
+                <DataGridTextColumn Header="Mx (kNm)" Binding="{Binding Mx}" Width="70"/>
+                <DataGridTextColumn Header="N.dh (kN)" Binding="{Binding N_LongTerm}" Width="70" Foreground="#2980B9"/>
+                <DataGridTextColumn Header="Mx.dh (kNm)" Binding="{Binding Mx_LongTerm}" Width="80" Foreground="#2980B9"/>
+                <DataGridCheckBoxColumn Header=">1.5m" Binding="{Binding IsVerticalPouring}" Width="50"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="DANH SÁCH CỘT CẦN TÍNH TOÁN" FontSize="18" FontWeight="Bold" Foreground="#2C3E50" VerticalAlignment="Center"/>
-                <TextBlock Text="(Tích chọn vào ô vuông để tính nhiều cột)" Margin="10,0,0,0" FontStyle="Italic" VerticalAlignment="Center" Foreground="Gray"/>
-            </StackPanel>
+        <Border Grid.Row="2" Background="#EEEEEE" BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="3" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-            <DataGrid Grid.Row="1" 
-                      ItemsSource="{Binding ColumnsList}" 
-                      SelectedItem="{Binding SelectedColumnInGrid}"
-                      AutoGenerateColumns="False" 
-                      CanUserAddRows="False"
-                      GridLinesVisibility="Horizontal"
-                      BorderThickness="1" BorderBrush="#AAAAAA"
-                      AlternatingRowBackground="#F9F9F9" 
-                      RowHeight="35" FontSize="14" HeadersVisibility="Column">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="Thao tác Form:" VerticalAlignment="Center" FontWeight="SemiBold" Margin="0,0,10,0" Foreground="Gray"/>
+                    <Button Content="TẠO MỚI (Reset)" Command="{Binding ClearFormCommand}" Width="110" Height="35" Margin="0,0,5,0" Background="White" BorderBrush="Gray" BorderThickness="1"/>
+                    <Button Content="THÊM VÀO BẢNG" Command="{Binding AddColumnCommand}" Width="130" Height="35" Margin="0,0,5,0" Background="#27AE60" Foreground="White" FontWeight="Bold" Style="{StaticResource MainButtonStyle}"/>
+                    <Button Content="LƯU SỬA ĐỔI" Command="{Binding UpdateColumnCommand}" Width="110" Height="35" Background="#F39C12" Foreground="White" FontWeight="Bold" Style="{StaticResource MainButtonStyle}"/>
+                </StackPanel>
 
-                <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" Header="Chọn" Width="50">
-                        <DataGridCheckBoxColumn.ElementStyle>
-                            <Style TargetType="CheckBox">
-                                <Setter Property="HorizontalAlignment" Value="Center"/>
-                                <Setter Property="VerticalAlignment" Value="Center"/>
-                            </Style>
-                        </DataGridCheckBoxColumn.ElementStyle>
-                    </DataGridCheckBoxColumn>
-
-                    <DataGridTextColumn Header="Tên Cột" Binding="{Binding ColumnName}" Width="80" FontWeight="Bold"/>
-                    <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}"/>
-                    <DataGridTextColumn Header="h (mm)" Binding="{Binding H, StringFormat='{}{0}'}" Width="60"/>
-                    <DataGridTextColumn Header="Bê tông" Binding="{Binding ConcreteGrade}" Width="70"/>
-                    <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="90" FontWeight="SemiBold"/>
-                    <DataGridTextColumn Header="Mx (kNm)" Binding="{Binding Mx}" Width="80"/>
-                    <DataGridTextColumn Header="My (kNm)" Binding="{Binding My}" Width="80"/>
-                    <DataGridTextColumn Header="Hệ số ψ" Binding="{Binding Psi}" Width="60"/>
-                </DataGrid.Columns>
-            </DataGrid>
-
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
-                <Button Content="Xóa cột đã chọn" Command="{Binding DeleteColumnCommand}" 
-                        Background="#C0392B" Width="150" Margin="0,0,15,0" Style="{StaticResource MainButtonStyle}"/>
-
-                <Button Content="TÍNH TOÁN CÁC CỘT ĐÃ CHỌN" Command="{Binding CalculateCommand}" 
-                        Background="#2980B9" Width="280" Height="50" FontSize="15" FontWeight="ExtraBold"
-                        Style="{StaticResource MainButtonStyle}">
-                    <Button.Effect>
-                        <DropShadowEffect Color="Gray" BlurRadius="5" ShadowDepth="2" Direction="270" Opacity="0.5"/>
-                    </Button.Effect>
-                </Button>
-            </StackPanel>
-        </Grid>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="Xóa dòng chọn" Command="{Binding DeleteColumnCommand}" Width="110" Height="35" Margin="0,0,20,0" Background="#E74C3C" Foreground="White" FontWeight="Bold" Style="{StaticResource MainButtonStyle}"/>
+                    <Button Content="TÍNH TOÁN NGAY >" Command="{Binding CalculateCommand}" Width="200" Height="45" FontSize="15" FontWeight="ExtraBold" Background="#2980B9" Foreground="White" Style="{StaticResource MainButtonStyle}">
+                        <Button.Effect>
+                            <DropShadowEffect Color="Gray" BlurRadius="5" ShadowDepth="2" Direction="270" Opacity="0.3"/>
+                        </Button.Effect>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
