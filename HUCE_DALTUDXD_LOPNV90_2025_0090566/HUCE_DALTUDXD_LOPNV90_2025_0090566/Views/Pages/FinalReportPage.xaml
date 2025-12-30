@@ -5,13 +5,52 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="FinalReportPage">
+      Title="Báo cáo cuối"
+      d:DesignHeight="700" d:DesignWidth="1280"
+      Background="White">
 
     <Grid Margin="30">
-        <TextBlock Text="BÁO CÁO HOÀN THÀNH" 
-                   FontSize="28" 
-                   FontWeight="Bold" 
-                   Margin="10"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="BÁO CÁO TỔNG HỢP KẾT QUẢ TÍNH TOÁN" FontSize="26" FontWeight="Bold" Foreground="#2C3E50" HorizontalAlignment="Center"/>
+            <TextBlock Text="(Danh sách các cột đã được thiết kế)" FontSize="16" Foreground="Gray" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" ItemsSource="{Binding ReportList}" AutoGenerateColumns="False" 
+                  CanUserAddRows="False" IsReadOnly="True"
+                  BorderBrush="#AAAAAA" BorderThickness="1"
+                  RowHeight="40" FontSize="14" AlternatingRowBackground="#FAFAFA"
+                  HeadersVisibility="Column">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tên Cột" Binding="{Binding ColumnName}" Width="80" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}" Width="60"/>
+                <DataGridTextColumn Header="h" Binding="{Binding H}" Width="60"/>
+                <DataGridTextColumn Header="Vật liệu" Binding="{Binding ConcreteGrade}" Width="80"/>
+                <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="100"/>
+                <DataGridTextColumn Header="As Yêu Cầu" Binding="{Binding As_Required, StringFormat=N0}" Width="120"/>
+                <DataGridTextColumn Header="THÉP ĐÃ CHỌN" Binding="{Binding ResultString}" FontWeight="ExtraBold" Foreground="Blue" Width="150"/>
+                <DataGridTextColumn Header="As Chọn" Binding="{Binding As_Provided, StringFormat=N0}" Width="120"/>
+                <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="120" FontWeight="Bold"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Grid.Row="2" Content="XUẤT HỒ SƠ EXCEL / WORD" 
+                Command="{Binding ExportCommand}"
+                Background="#16A085" Foreground="White"
+                FontSize="16" FontWeight="Bold"
+                Height="50" Width="350"
+                HorizontalAlignment="Center" Margin="0,20,0,0"
+                Cursor="Hand"
+                Style="{StaticResource MainButtonStyle}">
+            <Button.Effect>
+                <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3" Opacity="0.4"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

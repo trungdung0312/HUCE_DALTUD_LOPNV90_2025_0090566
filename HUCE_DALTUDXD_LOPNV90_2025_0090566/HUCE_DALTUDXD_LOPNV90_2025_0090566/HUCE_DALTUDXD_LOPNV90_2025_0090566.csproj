@@ -62,8 +62,14 @@
     </Compile>
     <Compile Include="Converters\NumberToColorConverter.cs" />
     <Compile Include="Model\ColumnInputData.cs" />
+    <Compile Include="Model\RebarResultData.cs" />
+    <Compile Include="Services\ExportService.cs" />
+    <Compile Include="Services\TcvnCalculationService.cs" />
     <Compile Include="ViewModel\ColumnInputViewModel.cs" />
+    <Compile Include="ViewModel\FinalReportViewModel.cs" />
+    <Compile Include="ViewModel\RebarDesignViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\ResultPreviewViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

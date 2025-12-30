@@ -23,10 +23,10 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             InitializeComponent();
 
             // --- QUÁ TRÌNH KHỞI TẠO (INITIALIZATION) ---
-            // 1. Tạo một "bộ não" mới (ViewModel)
+            // 1. Tạo mới (ViewModel)
             var viewModel = new ColumnInputViewModel();
 
-            // 2. Gán "bộ não" đó vào DataContext của trang này
+            // 2. Gán vào DataContext của trang này
             // DataContext là nơi Giao diện (XAML) tìm kiếm các biến như "CurrentColumn", "ConcreteGrades"...
             this.DataContext = viewModel;
         }
