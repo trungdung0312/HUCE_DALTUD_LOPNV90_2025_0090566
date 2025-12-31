@@ -56,10 +56,11 @@
                 <DataGridTextColumn Header="λ" Binding="{Binding Lambda, StringFormat=N1}" Width="50"/>
                 <DataGridTextColumn Header="η" Binding="{Binding Eta, StringFormat=N2}" Width="50" FontWeight="Bold" Foreground="#D35400"/>
                 <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="60"/>
-                <DataGridTextColumn Header="As(1 bên)" Binding="{Binding As_OneSide, StringFormat=N0}" 
-                                    Foreground="#8E44AD" FontWeight="SemiBold" Width="80"/>
-                <DataGridTextColumn Header="As.yc (mm²)" Binding="{Binding As_Required, StringFormat=N0}" 
-                                    Foreground="Red" FontWeight="Bold" Width="90"/>
+                <DataGridTextColumn Header="As(1 bên)" Binding="{Binding As_OneSide, StringFormat=N2}" 
+                                    Foreground="#8E44AD" FontWeight="SemiBold" Width="85"/>
+
+                <DataGridTextColumn Header="ΣAs.yc" Binding="{Binding As_Required, StringFormat=N2}" 
+                                    Foreground="Red" FontWeight="Bold" Width="95"/>
 
                 <DataGridTextColumn Header="CHỌN THÉP" Binding="{Binding ResultString}" 
                                     Foreground="#2980B9" FontWeight="ExtraBold" Width="90"/>
