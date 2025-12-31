@@ -32,13 +32,18 @@
                 <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}" Width="60"/>
                 <DataGridTextColumn Header="h" Binding="{Binding H}" Width="60"/>
                 <DataGridTextColumn Header="L0 (mm)" Binding="{Binding L0, StringFormat=N0}" Width="80"/>
-
                 <DataGridTextColumn Header="Độ mảnh λ" Binding="{Binding Lambda, StringFormat=N1}" Width="80"/>
                 <DataGridTextColumn Header="Hệ số η" Binding="{Binding Eta, StringFormat=N2}" Width="70"/>
                 <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="80"/>
+                <DataGridTextColumn Header="L0 (mm)" Binding="{Binding L0, StringFormat=N0}" Width="70"/>
+                <DataGridTextColumn Header="λ" Binding="{Binding Lambda, StringFormat=N1}" Width="50"/>
+                <DataGridTextColumn Header="η" Binding="{Binding Eta, StringFormat=N2}" Width="50" FontWeight="Bold" Foreground="#D35400"/>
+                <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="60"/>
+                <DataGridTextColumn Header="As(1 bên)" Binding="{Binding As_OneSide, StringFormat=N2}" 
+                                    Foreground="#8E44AD" FontWeight="SemiBold" Width="85"/>
 
-                <DataGridTextColumn Header="As Yêu Cầu" Binding="{Binding As_Required, StringFormat=N0}" 
-                                    Foreground="Red" FontWeight="SemiBold" Width="120"/>
+                <DataGridTextColumn Header="ΣAs.yc" Binding="{Binding As_Required, StringFormat=N2}" 
+                                    Foreground="Red" FontWeight="Bold" Width="95"/>
 
                 <DataGridTextColumn Header="GỢI Ý CHỌN" Binding="{Binding ResultString}" 
                                     Foreground="Blue" FontWeight="Bold" Width="120"/>
