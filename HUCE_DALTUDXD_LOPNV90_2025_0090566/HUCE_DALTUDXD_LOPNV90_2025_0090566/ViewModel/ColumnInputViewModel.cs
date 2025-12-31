@@ -12,7 +12,7 @@ using HUCE_DALTUDXD_LOPNV90_2025_0090566.Model;
 
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 {
-    // Class hỗ trợ hiển thị Psi trong ComboBox (VD: Hiện "Ngàm - Khớp" nhưng giá trị là 0.7)
+    // Class hỗ trợ hiển thị ComboBox Psi
     public class PsiOption
     {
         public string Name { get; set; }
@@ -24,6 +24,11 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
         // --- 1. CÁC DANH SÁCH DỮ LIỆU (SOURCE) ---
         public List<string> ConcreteGrades { get; } = new List<string> { "B15", "B20", "B25", "B30", "B35", "B40" };
         public List<string> SteelGrades { get; } = new List<string> { "CB240-T", "CB300-V", "CB400-V", "CB500-V" };
+
+        // Danh sách cho Cốt đai
+        public List<string> StirrupGrades { get; } = new List<string> { "CB240-T", "CB300-V" };
+        public List<int> StirrupDiameters { get; } = new List<int> { 6, 8, 10, 12, 14 };
+
         public List<PsiOption> PsiOptions { get; } = new List<PsiOption>
         {
             new PsiOption { Name = "Ngàm - Ngàm (0.5)", Value = 0.5 },
@@ -32,12 +37,10 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             new PsiOption { Name = "Ngàm - Tự do (2.0)", Value = 2.0 }
         };
 
-        // Danh sách cột hiển thị trên DataGrid (ObservableCollection giúp giao diện tự cập nhật khi thêm/xóa)
+        // Danh sách cột hiển thị trên DataGrid
         public ObservableCollection<ColumnInputData> ColumnsList { get; set; }
 
         // --- 2. CÁC BIẾN TRẠNG THÁI ---
-
-        // Cột đang nhập liệu trên Form
         private ColumnInputData _currentColumn;
         public ColumnInputData CurrentColumn
         {
@@ -45,7 +48,6 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             set { _currentColumn = value; OnPropertyChanged(); }
         }
 
-        // Cột đang được chọn bên DataGrid (để sửa hoặc xóa)
         private ColumnInputData _selectedColumnInGrid;
         public ColumnInputData SelectedColumnInGrid
         {
@@ -54,34 +56,27 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             {
                 _selectedColumnInGrid = value;
                 OnPropertyChanged();
-                // Khi chọn dòng bên bảng -> Đổ dữ liệu ngược lại Form để sửa
+                // Live Edit: Khi chọn dòng, đổ dữ liệu lên Form 
                 if (_selectedColumnInGrid != null)
                 {
-                    // Copy dữ liệu sang CurrentColumn (Clone) để tránh sửa trực tiếp trên bảng khi chưa bấm Lưu
-                    // Nhưng để đơn giản cho bạn lúc này, mình gán trực tiếp.
-                    // (Sửa trên Form sẽ nhảy số trên bảng luôn - Tính năng Live Edit)
                     CurrentColumn = _selectedColumnInGrid;
                 }
             }
         }
 
-        // --- 3. CÁC LỆNH (COMMANDS) ---
+        // --- 3. COMMANDS ---
         public ICommand AddColumnCommand { get; set; }
         public ICommand UpdateColumnCommand { get; set; }
         public ICommand DeleteColumnCommand { get; set; }
         public ICommand ClearFormCommand { get; set; }
         public ICommand CalculateCommand { get; set; }
 
-        // --- 4. HÀM KHỞI TẠO (CONSTRUCTOR) - CHẠY ĐẦU TIÊN ---
+        // --- 4. CONSTRUCTOR ---
         public ColumnInputViewModel()
         {
-            // Khởi tạo danh sách rỗng
             ColumnsList = new ObservableCollection<ColumnInputData>();
-
-            // Tạo một cột mới tinh để nhập liệu
             CurrentColumn = CreateNewColumn();
 
-            // Gán chức năng cho các nút bấm
             AddColumnCommand = new RelayCommand(ExecuteAddColumn);
             UpdateColumnCommand = new RelayCommand(ExecuteUpdateColumn);
             DeleteColumnCommand = new RelayCommand(ExecuteDeleteColumn);
@@ -93,120 +88,149 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 
         private ColumnInputData CreateNewColumn()
         {
-            // Tạo cột mặc định
+            // Tạo cột mặc định với các thông số phổ biến
             return new ColumnInputData
             {
                 ColumnName = "C" + (ColumnsList.Count + 1),
                 ConcreteGrade = "B20",
                 SteelGrade = "CB400-V",
+
+                // Mặc định Cốt đai
+                StirrupGrade = "CB240-T",
+                StirrupDiameter = 6,
+
+                IsVerticalPouring = true, // Mặc định đổ bê tông > 1.5m (an toàn)
+                StructureType = StructureType.StaticallyIndeterminate, // Mặc định siêu tĩnh
+
                 B = 300,
                 H = 400,
                 L = 3600,
                 Psi = 0.7,
-                ConcreteCover = 25
+                ConcreteCover = 25,
+
+                // Khởi tạo nội lực = 0
+                N = 0,
+                Mx = 0,
+                My = 0,
+                N_LongTerm = 0,
+                Mx_LongTerm = 0,
+                My_LongTerm = 0
             };
         }
 
         private void ExecuteAddColumn(object obj)
         {
-            // Logic thêm cột
             if (CurrentColumn == null) return;
 
-            // Kiểm tra trùng tên (nếu cần)
-
-            // Thêm vào danh sách (Sẽ tự hiện lên DataGrid)
-            // Lưu ý: Phải tạo đối tượng mới để ngắt kết nối với Form
+            // COPY toàn bộ dữ liệu từ Form vào đối tượng mới để thêm vào list
             var newCol = new ColumnInputData
             {
                 ColumnName = CurrentColumn.ColumnName,
+
+                // Vật liệu & Thi công
                 ConcreteGrade = CurrentColumn.ConcreteGrade,
+                Rb = CurrentColumn.Rb,
+                IsVerticalPouring = CurrentColumn.IsVerticalPouring,
+
                 SteelGrade = CurrentColumn.SteelGrade,
+                Rs = CurrentColumn.Rs,
+
+                StirrupGrade = CurrentColumn.StirrupGrade,
+                StirrupDiameter = CurrentColumn.StirrupDiameter,
+                Rsw = CurrentColumn.Rsw,
+
+                // Hình học
                 B = CurrentColumn.B,
                 H = CurrentColumn.H,
                 L = CurrentColumn.L,
+                ConcreteCover = CurrentColumn.ConcreteCover,
+                StructureType = CurrentColumn.StructureType,
+                Psi = CurrentColumn.Psi,
+
+                // Nội lực
                 N = CurrentColumn.N,
                 Mx = CurrentColumn.Mx,
                 My = CurrentColumn.My,
-                Psi = CurrentColumn.Psi,
-                ConcreteCover = CurrentColumn.ConcreteCover,
-                Rb = CurrentColumn.Rb,
-                Rs = CurrentColumn.Rs
+                N_LongTerm = CurrentColumn.N_LongTerm,
+                Mx_LongTerm = CurrentColumn.Mx_LongTerm,
+                My_LongTerm = CurrentColumn.My_LongTerm
             };
 
             ColumnsList.Add(newCol);
 
-            // Sau khi thêm, tạo form mới để nhập tiếp
+            // Reset Form để nhập cái tiếp theo
             CurrentColumn = CreateNewColumn();
         }
 
         private void ExecuteUpdateColumn(object obj)
         {
-            // Vì mình đang Binding trực tiếp, nên sửa trên Form là sửa trên List rồi.
-            // Nút này có thể dùng để thông báo "Đã lưu" hoặc Validate lại.
-            MessageBox.Show("Đã cập nhật thông tin cột!", "Thông báo");
+            // Vì Binding Mode=TwoWay, dữ liệu đã được cập nhật.
+            // Chỉ cần báo thành công.
+            MessageBox.Show("Đã lưu thông tin!", "Thông báo");
         }
 
         private void ExecuteDeleteColumn(object obj)
         {
-            // Xóa các cột ĐANG ĐƯỢC TÍCH CHỌN (CheckBox)
+            // Xóa các cột ĐANG ĐƯỢC TÍCH CHỌN
             var itemsToRemove = ColumnsList.Where(c => c.IsSelected).ToList();
 
             if (itemsToRemove.Count == 0 && SelectedColumnInGrid != null)
             {
-                // Nếu không tích chọn cái nào thì xóa cái đang click chuột vào
                 itemsToRemove.Add(SelectedColumnInGrid);
             }
 
             if (itemsToRemove.Count > 0)
             {
-                var confirm = MessageBox.Show($"Bạn có chắc muốn xóa {itemsToRemove.Count} cột?", "Xác nhận", MessageBoxButton.YesNo);
+                var confirm = MessageBox.Show($"Xóa {itemsToRemove.Count} cột đã chọn?", "Xác nhận", MessageBoxButton.YesNo);
                 if (confirm == MessageBoxResult.Yes)
                 {
-                    foreach (var item in itemsToRemove)
-                    {
-                        ColumnsList.Remove(item);
-                    }
+                    foreach (var item in itemsToRemove) ColumnsList.Remove(item);
+                    ExecuteClearForm(null); // Reset form nếu xóa cái đang chọn
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn cột để xóa!", "Nhắc nhở");
+                MessageBox.Show("Chọn cột để xóa!", "Nhắc nhở");
             }
         }
 
         private void ExecuteClearForm(object obj)
         {
             CurrentColumn = CreateNewColumn();
-            // Bỏ chọn bên bảng
-            SelectedColumnInGrid = null;
+            SelectedColumnInGrid = null; // Bỏ chọn trên bảng
         }
 
         private void ExecuteCalculate(object obj)
         {
-            // 1. Lấy cột đã chọn
+            // 1. Lọc các cột được tích chọn
             var selectedColumns = ColumnsList.Where(c => c.IsSelected).ToList();
 
             if (selectedColumns.Count == 0)
             {
-                MessageBox.Show("Vui lòng tích chọn ít nhất 1 cột trong bảng để tính toán!", "Chưa chọn cột");
+                MessageBox.Show("Vui lòng tích chọn cột trong bảng để tính!", "Chưa chọn");
                 return;
             }
 
-            // 2. Tính toán (Giữ nguyên phần này)
+
+            // 2. Gọi Service tính toán 
             var results = new List<RebarResultData>();
             foreach (var col in selectedColumns)
             {
-                var res = Services.TcvnCalculationService.CalculateColumn(col);
-                results.Add(res);
+                try
+                {
+                    var res = Services.TcvnCalculationService.CalculateColumn(col);
+                    results.Add(res);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi tính cột {col.ColumnName}: {ex.Message}", "Lỗi");
+                }
             }
 
-            // 3. CHUYỂN TRANG (SỬA ĐOẠN NÀY)
-            // Tìm cửa sổ MainWindow đang chạy
+            // 3. Chuyển trang hiển thị kết quả
             var mainWindow = Application.Current.MainWindow as Views.MainWindow;
-
             if (mainWindow != null)
             {
-                // Gọi hàm chuyển trang và truyền dữ liệu
                 mainWindow.ShowResults(results);
             }
         }

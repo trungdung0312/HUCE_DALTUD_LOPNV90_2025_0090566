@@ -12,15 +12,19 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 {
     public class ResultPreviewViewModel : INotifyPropertyChanged
     {
-        // Danh sách chứa kết quả tính toán để hiện lên bảng
+        // Danh sách kết quả hiển thị trên bảng
         public ObservableCollection<RebarResultData> ResultsList { get; set; }
 
-        // Biến lưu trữ dòng đang được chọn trong bảng
+        // Dòng kết quả đang được chọn
         private RebarResultData _selectedResult;
         public RebarResultData SelectedResult
         {
             get => _selectedResult;
-            set { _selectedResult = value; OnPropertyChanged(); }
+            set
+            {
+                _selectedResult = value;
+                OnPropertyChanged();
+            }
         }
 
         public ResultPreviewViewModel()
@@ -28,13 +32,16 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             ResultsList = new ObservableCollection<RebarResultData>();
         }
 
-        // Hàm nhận dữ liệu từ trang Nhập liệu gửi sang
-        public void UpdateResults(List<RebarResultData> newResults)
+        // Hàm cập nhật dữ liệu từ MainWindow gửi sang
+        public void UpdateResults(List<RebarResultData> data)
         {
             ResultsList.Clear();
-            foreach (var item in newResults)
+            if (data != null)
             {
-                ResultsList.Add(item);
+                foreach (var item in data)
+                {
+                    ResultsList.Add(item);
+                }
             }
         }
 
