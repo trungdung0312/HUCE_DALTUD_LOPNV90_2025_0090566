@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HUCE_DALTUDXD_LOPNV90_2025_0090566.Model;
+using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +13,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages;
 
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 {
     public partial class MainWindow : Window
     {
-        // --- KHAI BÁO CÁC TRANG (Singleton-like) ---
-        // Khai báo ở đây để giữ dữ liệu không bị mất khi chuyển trang
+        // --- KHAI BÁO CÁC TRANG ---
         private ColumnInputPage _inputPage;
         private ResultPreviewPage _resultPage;
         private RebarDesignPage _rebarPage;
         private FinalReportPage _reportPage;
+
+        // [MỚI] Biến lưu trữ dữ liệu hiện tại để dùng chung cho các trang
+        private List<RebarResultData> _currentData;
 
         public MainWindow()
         {
@@ -42,12 +45,13 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 
         private void BtnInput_Click(object sender, RoutedEventArgs e)
         {
-            // Điều hướng đến trang đã khởi tạo sẵn
             MainFrame.Navigate(_inputPage);
         }
 
         private void BtnResult_Click(object sender, RoutedEventArgs e)
         {
+            // Nếu đã có dữ liệu, update lại trang kết quả trước khi vào (phòng khi sửa thép xong quay lại)
+            if (_currentData != null) _resultPage.LoadData(_currentData);
             MainFrame.Navigate(_resultPage);
         }
 
@@ -58,31 +62,43 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 
         private void BtnFinal_Click(object sender, RoutedEventArgs e)
         {
-            // Chuyển sang trang báo cáo
+            // [QUAN TRỌNG] Nạp dữ liệu mới nhất vào trang báo cáo trước khi chuyển trang
+            // Điều này đảm bảo những chỉnh sửa thép ở bước trước đó được cập nhật lên bảng
+            if (_currentData != null)
+            {
+                _reportPage.LoadData(_currentData);
+            }
+
             MainFrame.Navigate(_reportPage);
         }
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
-            // Hỏi người dùng trước khi thoát
             if (MessageBox.Show("Bạn có chắc muốn thoát?", "Xác nhận",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
             }
         }
-        public void ShowResults(System.Collections.Generic.List<HUCE_DALTUDXD_LOPNV90_2025_0090566.Model.RebarResultData> results)
-        {
-            // Nạp dữ liệu vào trang Xem trước (Page 2)
-            _resultPage.LoadData(results);
 
-            // QUAN TRỌNG: Nạp LUÔN dữ liệu vào trang Báo cáo (Page 4) để dành
-            _reportPage.LoadData(results);
+        // Hàm này được gọi từ ColumnInputPage sau khi bấm "TÍNH TOÁN"
+        public void ShowResults(List<RebarResultData> results)
+        {
+            // [MỚI] Lưu dữ liệu vào biến toàn cục của MainWindow
+            _currentData = results;
+
+            // Nạp dữ liệu vào trang Xem trước
+            _resultPage.LoadData(_currentData);
+
+            // Nạp luôn vào trang Báo cáo để sẵn sàng
+            _reportPage.LoadData(_currentData);
 
             // Chuyển người dùng đến trang Xem trước
             MainFrame.Navigate(_resultPage);
         }
-        public void GoToRebarDesign(Model.RebarResultData selectedColumn)
+
+        // Hàm này được gọi từ ResultPreviewPage khi bấm "CHỌN THÉP"
+        public void GoToRebarDesign(RebarResultData selectedColumn)
         {
             // Nạp dữ liệu vào trang thiết kế
             _rebarPage.LoadColumnData(selectedColumn);
@@ -91,5 +107,4 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
             MainFrame.Navigate(_rebarPage);
         }
     }
-
 }

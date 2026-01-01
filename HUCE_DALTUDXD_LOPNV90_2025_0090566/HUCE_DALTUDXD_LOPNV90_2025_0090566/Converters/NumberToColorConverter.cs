@@ -9,7 +9,7 @@ using System.Windows.Media;
 
 namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Converters
 {
-    // Converter này chuyển đổi giá trị số (double) sang màu sắc (Brush)
+    // Converter chuyển đổi giá trị số (double) sang màu sắc (Brush)
     public class NumberToColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

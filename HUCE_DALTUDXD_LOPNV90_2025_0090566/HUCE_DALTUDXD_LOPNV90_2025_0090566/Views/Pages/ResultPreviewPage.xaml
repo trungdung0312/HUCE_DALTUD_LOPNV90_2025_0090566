@@ -26,63 +26,91 @@
         </Border>
 
         <DataGrid Grid.Row="1" ItemsSource="{Binding ResultsList}" 
-                  SelectedItem="{Binding SelectedResult}"
-                  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
-                  BorderBrush="#AAAAAA" BorderThickness="1"
-                  RowHeight="35" FontSize="13" 
-                  AlternatingRowBackground="#F2F4F4" GridLinesVisibility="All"
-                  HeadersVisibility="Column" HorizontalScrollBarVisibility="Auto">
+          SelectedItem="{Binding SelectedResult}"
+          AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
+          BorderBrush="#95A5A6" BorderThickness="1"
+          RowHeight="40" FontSize="13" 
+          AlternatingRowBackground="#F4F6F6" GridLinesVisibility="All"
+          HeadersVisibility="Column" HorizontalScrollBarVisibility="Auto"
+          VerticalScrollBarVisibility="Auto">
 
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontWeight" Value="Bold"/>
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Padding" Value="5,10,5,10"/>
                     <Setter Property="Background" Value="#ECF0F1"/>
                     <Setter Property="BorderBrush" Value="#BDC3C7"/>
                     <Setter Property="BorderThickness" Value="0,0,1,1"/>
                 </Style>
             </DataGrid.ColumnHeaderStyle>
 
+            <DataGrid.Resources>
+                <Style TargetType="TextBlock" x:Key="CenterCell">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Tên" Binding="{Binding ColumnName}" FontWeight="Bold" Width="60"/>
-                <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}" Width="60"/>
-                <DataGridTextColumn Header="h (mm)" Binding="{Binding H}" Width="60"/>
+                <DataGridTextColumn Header="Tên" Binding="{Binding ColumnName}" FontWeight="Bold" Width="50" ElementStyle="{StaticResource CenterCell}"/>
+                <DataGridTextColumn Header="Tiết diện" Binding="{Binding B, StringFormat='{}{0}x'}" Width="60" ElementStyle="{StaticResource CenterCell}"/>
+                <DataGridTextColumn Header="h (mm)" Binding="{Binding H}" Width="60" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="70" FontWeight="SemiBold"/>
-                <DataGridTextColumn Header="M (kNm)" Binding="{Binding Mx}" Width="70"/>
+                <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="70" FontWeight="SemiBold" ElementStyle="{StaticResource CenterCell}"/>
+                <DataGridTextColumn Header="Mx (kNm)" Binding="{Binding Mx}" Width="70" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="L0 (mm)" Binding="{Binding L0, StringFormat=N0}" Width="70"/>
-                <DataGridTextColumn Header="λ" Binding="{Binding Lambda, StringFormat=N1}" Width="50"/>
-                <DataGridTextColumn Header="η" Binding="{Binding Eta, StringFormat=N2}" Width="50" FontWeight="Bold" Foreground="#D35400"/>
-                <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="60"/>
-                <DataGridTextColumn Header="As(1 bên)" Binding="{Binding As_OneSide, StringFormat=N2}" 
-                                    Foreground="#8E44AD" FontWeight="SemiBold" Width="85"/>
+                <DataGridTextColumn Header="L0 (mm)" Binding="{Binding L0, StringFormat=N0}" Width="65" ElementStyle="{StaticResource CenterCell}"/>
+                <DataGridTextColumn Header="λ" Binding="{Binding Lambda, StringFormat=N1}" Width="50" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="ΣAs.yc" Binding="{Binding As_Required, StringFormat=N2}" 
-                                    Foreground="Red" FontWeight="Bold" Width="95"/>
+                <DataGridTextColumn Header="η" Binding="{Binding Eta, StringFormat=N2}" Width="50" FontWeight="Bold" Foreground="#D35400">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="ToolTip" Value="Hệ số uốn dọc (phải >= 1)"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
 
-                <DataGridTextColumn Header="CHỌN THÉP" Binding="{Binding ResultString}" 
-                                    Foreground="#2980B9" FontWeight="ExtraBold" Width="90"/>
+                <DataGridTextColumn Header="e0 (mm)" Binding="{Binding E0, StringFormat=N0}" Width="60" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="As.chọn" Binding="{Binding As_Provided, StringFormat=N0}" Width="80"/>
-                <DataGridTextColumn Header="μ (%)" Binding="{Binding Mu_Percentage, StringFormat=N2}" Width="60"/>
+                <DataGridTextColumn Header="As(1 bên)" Binding="{Binding As_OneSide, StringFormat=N0}" 
+                            Foreground="Gray" Width="70" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="CỐT ĐAI" Binding="{Binding StirrupInfo}" Width="80" FontWeight="SemiBold"/>
+                <DataGridTextColumn Header="ΣAs.yc" Binding="{Binding As_Required, StringFormat=N0}" 
+                            Foreground="Red" FontWeight="Bold" Width="80" ElementStyle="{StaticResource CenterCell}"/>
 
-                <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="110" FontWeight="Bold">
+                <DataGridTextColumn Header="BỐ TRÍ THÉP (X+Y)" Binding="{Binding ResultString}" 
+                            Foreground="#2980B9" FontWeight="ExtraBold" Width="160">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="5,0,0,0"/>
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="As.chọn" Binding="{Binding As_Provided, StringFormat=N0}" Width="70" ElementStyle="{StaticResource CenterCell}"/>
+
+                <DataGridTextColumn Header="μ (%)" Binding="{Binding Mu_Percentage, StringFormat=N2}" Width="60" ElementStyle="{StaticResource CenterCell}"/>
+
+                <DataGridTextColumn Header="Cốt Đai" Binding="{Binding StirrupInfo}" Width="90" ElementStyle="{StaticResource CenterCell}"/>
+
+                <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="100" FontWeight="Bold">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="VerticalAlignment" Value="Center"/>
-                                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                                    <Style.Triggers>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Style.Triggers>
                                 <DataTrigger Binding="{Binding Status}" Value="Đạt">
                                     <Setter Property="Foreground" Value="Green"/>
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding Status}" Value="Không đạt">
                                     <Setter Property="Foreground" Value="Red"/>
                                 </DataTrigger>
-
                                 <DataTrigger Binding="{Binding Status}" Value="Mất ổn định">
                                     <Setter Property="Foreground" Value="#E67E22"/>
                                 </DataTrigger>
@@ -94,12 +122,14 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-
                 <DataGridTextColumn Header="Ghi chú" Binding="{Binding Note}" Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
                             <Setter Property="Padding" Value="5,0"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="Foreground" Value="Gray"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>

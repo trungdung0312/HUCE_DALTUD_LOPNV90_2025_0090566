@@ -203,9 +203,14 @@
                 <DataGridTextColumn Header="Thép Đai" Binding="{Binding StirrupGrade}" Width="70"/>
                 <DataGridTextColumn Header="Φ Đai" Binding="{Binding StirrupDiameter}" Width="50"/>
                 <DataGridTextColumn Header="N (kN)" Binding="{Binding N}" Width="70" FontWeight="SemiBold"/>
+
                 <DataGridTextColumn Header="Mx (kNm)" Binding="{Binding Mx}" Width="70"/>
+                <DataGridTextColumn Header="My (kNm)" Binding="{Binding My}" Width="70"/>
+
                 <DataGridTextColumn Header="N.dh (kN)" Binding="{Binding N_LongTerm}" Width="70" Foreground="#2980B9"/>
                 <DataGridTextColumn Header="Mx.dh (kNm)" Binding="{Binding Mx_LongTerm}" Width="80" Foreground="#2980B9"/>
+                <DataGridTextColumn Header="My.dh (kNm)" Binding="{Binding My_LongTerm}" Width="80" Foreground="#2980B9"/>
+
                 <DataGridCheckBoxColumn Header=">1.5m" Binding="{Binding IsVerticalPouring}" Width="50"/>
             </DataGrid.Columns>
         </DataGrid>

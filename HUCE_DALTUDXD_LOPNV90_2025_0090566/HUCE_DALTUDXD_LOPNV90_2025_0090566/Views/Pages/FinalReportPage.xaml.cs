@@ -28,10 +28,9 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             this.DataContext = _viewModel;
         }
 
-        // --- HÀM NÀY ĐANG BỊ THIẾU, CẦN BỔ SUNG ---
         public void LoadData(List<RebarResultData> data)
         {
-            // Gọi ViewModel để nạp dữ liệu vào bảng
+            // Truyền dữ liệu vào ViewModel để hiển thị và chuẩn bị xuất file
             _viewModel.LoadReportData(data);
         }
     }

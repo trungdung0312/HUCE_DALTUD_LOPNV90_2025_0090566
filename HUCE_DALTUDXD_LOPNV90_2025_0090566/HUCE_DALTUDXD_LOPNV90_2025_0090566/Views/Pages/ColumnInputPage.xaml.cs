@@ -27,7 +27,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             var viewModel = new ColumnInputViewModel();
 
             // 2. Gán vào DataContext của trang này
-            // DataContext là nơi Giao diện (XAML) tìm kiếm các biến như "CurrentColumn", "ConcreteGrades"...
+            // DataContext là nơi Giao diện (XAML) tìm kiếm các biến như "CurrentColumn", "ConcreteGrades"
             this.DataContext = viewModel;
         }
     }
