@@ -15,10 +15,9 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
 {
     public class FinalReportViewModel : INotifyPropertyChanged
     {
-        // Danh sách để hiển thị lên bảng báo cáo
+        // Danh sách hiển thị lên bảng 
         public ObservableCollection<RebarResultData> ReportList { get; set; }
 
-        // Lệnh xuất file
         public ICommand ExportCommand { get; set; }
 
         public FinalReportViewModel()
@@ -27,13 +26,20 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             ExportCommand = new RelayCommand(ExecuteExport);
         }
 
-        // Hàm nhận dữ liệu từ các trang trước
+        // Hàm nhận dữ liệu
         public void LoadReportData(List<RebarResultData> data)
         {
             ReportList.Clear();
-            foreach (var item in data)
+            if (data != null)
             {
-                ReportList.Add(item);
+                foreach (var item in data)
+                {
+                    // Chỉ thêm cột đã tính xong
+                    if (!string.IsNullOrEmpty(item.Status))
+                    {
+                        ReportList.Add(item);
+                    }
+                }
             }
         }
 
@@ -41,45 +47,39 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
         {
             if (ReportList.Count == 0)
             {
-                MessageBox.Show("Chưa có dữ liệu để xuất báo cáo!", "Thông báo");
+                MessageBox.Show("Chưa có dữ liệu để xuất báo cáo!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Mở hộp thoại chọn nơi lưu file
             SaveFileDialog saveDialog = new SaveFileDialog();
-            // Cho phép lưu thành file .xls (Excel tự mở được HTML)
-            saveDialog.Filter = "Excel File (*.xls)|*.xls|HTML File (*.html)|*.html";
-            saveDialog.FileName = "ThuyetMinh_Cot_BTCT.xls";
+            // Lưu file đuôi .xls nhưng nội dung là HTML -> Excel vẫn mở tốt và giữ định dạng màu sắc đẹp hơn CSV
+            saveDialog.Filter = "Excel Web File (*.xls)|*.xls|HTML Report (*.html)|*.html";
+            saveDialog.FileName = $"ThuyetMinh_Cot_{DateTime.Now:ddMMyy}.xls";
 
             if (saveDialog.ShowDialog() == true)
             {
                 try
                 {
-                    // Chuyển ObservableCollection sang List để gửi cho Service
                     var dataToList = new List<RebarResultData>(ReportList);
 
-                    // Gọi Service xuất file
+                    // Gọi Service đã nâng cấp
                     Services.ExportService.ExportToHtml(dataToList, saveDialog.FileName);
 
-                    var result = MessageBox.Show("Xuất file thành công!\nBạn có muốn mở file ngay không?", "Thành công", MessageBoxButton.YesNo, MessageBoxImage.Information);
-
-                    if (result == MessageBoxResult.Yes)
+                    var res = MessageBox.Show("Xuất file thành công!\nBạn có muốn mở file ngay không?", "Thành công", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (res == MessageBoxResult.Yes)
                     {
-                        // Tự động mở file vừa xuất
-                        System.Diagnostics.Process.Start(saveDialog.FileName);
+                        // Mở file bằng phần mềm mặc định (Excel hoặc Trình duyệt)
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(saveDialog.FileName) { UseShellExecute = true });
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Có lỗi khi xuất file: " + ex.Message, "Lỗi");
+                    MessageBox.Show("Có lỗi khi xuất file: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        protected void OnPropertyChanged([CallerMemberName] string name = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }

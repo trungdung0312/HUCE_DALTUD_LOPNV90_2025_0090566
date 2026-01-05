@@ -27,172 +27,154 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             InitializeComponent();
             _viewModel = new RebarDesignViewModel();
             this.DataContext = _viewModel;
-
             _viewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
         public void LoadColumnData(RebarResultData column)
         {
+            if (column == null) return;
             _viewModel.DesignColumn = column;
             DrawSection();
         }
 
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(RebarDesignViewModel.DesignColumn))
-            {
-                DrawSection();
-            }
+            if (e.PropertyName == nameof(RebarDesignViewModel.DesignColumn)) DrawSection();
         }
 
-        private void DetailCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            DrawSection();
-        }
+        private void DetailCanvas_SizeChanged(object sender, SizeChangedEventArgs e) => DrawSection();
+        private void BtnBack_Click(object sender, RoutedEventArgs e) { if (NavigationService.CanGoBack) NavigationService.GoBack(); }
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            if (NavigationService.CanGoBack) NavigationService.GoBack();
-        }
-
-        // =================================================================
-        // HÀM VẼ HÌNH CHÍNH (ĐÃ CHỈNH SỬA TỌA ĐỘ CHUẨN KỸ THUẬT)
-        // =================================================================
         private void DrawSection()
         {
             DetailCanvas.Children.Clear();
             var col = _viewModel.DesignColumn;
-            if (col == null) return;
+            if (col == null || col.B <= 0 || col.H <= 0) return;
 
-            // --- 0. THÔNG SỐ GIẢ ĐỊNH ĐỂ VẼ ---
-            double realCover = col.ConcreteCover > 0 ? col.ConcreteCover : 25.0;
-            double stirrupDiameter = 8.0; // Giả định cốt đai phi 8 để tính khoảng hở
+            double canvasW = DetailCanvas.ActualWidth;
+            double canvasH = DetailCanvas.ActualHeight;
+            if (canvasW <= 0 || canvasH <= 0) return;
 
-            // 1. Lấy kích thước khung vẽ
-            double w = DetailCanvas.ActualWidth > 0 ? DetailCanvas.ActualWidth : 500;
-            double h = DetailCanvas.ActualHeight > 0 ? DetailCanvas.ActualHeight : 600;
-
-            // 2. Tính tỷ lệ Scale
-            double scaleX = (w - 120) / col.B;
-            double scaleY = (h - 120) / col.H;
+            // 1. TÍNH TỈ LỆ VẼ (SCALE)
+            double padding = 60;
+            double scaleX = (canvasW - padding * 2) / col.B;
+            double scaleY = (canvasH - padding * 2) / col.H;
             double scale = Math.Min(scaleX, scaleY);
 
-            // Kích thước Pixel
             double drawB = col.B * scale;
             double drawH = col.H * scale;
-            double coverPx = realCover * scale;        // Lớp bảo vệ (px)
-            double stirrupPx = stirrupDiameter * scale; // Đường kính đai (px) - Dùng để đẩy thép chủ vào trong
+            double startX = (canvasW - drawB) / 2;
+            double startY = (canvasH - drawH) / 2;
 
-            // Tọa độ gốc (Góc trên trái của bê tông)
-            double startX = (w - drawB) / 2;
-            double startY = (h - drawH) / 2;
+            double coverPx = (col.ConcreteCover > 0 ? col.ConcreteCover : 25) * scale;
+            double stirrupStroke = 1.5; // Nét đai mảnh (1.5px)
 
-            // ---------------------------------------------------------
-            // BƯỚC 1: VẼ KHỐI BÊ TÔNG (MÀU XÁM)
-            // ---------------------------------------------------------
-            Rectangle concreteBlock = new Rectangle
+            // Đường kính góc (Mặc định lấy D1 của phương X)
+            double dCorner = col.Diameter1_X > 0 ? col.Diameter1_X : 20;
+            double sizeCorner = Math.Max(dCorner * scale, 6.0);
+
+            // 2. VẼ BÊ TÔNG
+            Rectangle rectConcrete = new Rectangle
             {
                 Width = drawB,
                 Height = drawH,
-                Stroke = Brushes.Black,
-                StrokeThickness = 3,
-                Fill = new SolidColorBrush(Color.FromRgb(211, 211, 211)) // LightGray
+                Stroke = Brushes.Blue,
+                StrokeThickness = 2,
+                Fill = Brushes.Transparent
             };
-            Canvas.SetLeft(concreteBlock, startX);
-            Canvas.SetTop(concreteBlock, startY);
-            DetailCanvas.Children.Add(concreteBlock);
+            Canvas.SetLeft(rectConcrete, startX); Canvas.SetTop(rectConcrete, startY);
+            DetailCanvas.Children.Add(rectConcrete);
 
-            // ---------------------------------------------------------
-            // BƯỚC 2: VẼ CỐT ĐAI (NẰM TRONG LỚP BẢO VỆ)
-            // ---------------------------------------------------------
-            // Vị trí cốt đai: Cách mép ngoài bê tông một đoạn = Cover
-            Rectangle stirrup = new Rectangle
+            // 3. VẼ CỐT ĐAI
+            double cornerRadius = (sizeCorner / 2) + stirrupStroke;
+            Rectangle rectStirrup = new Rectangle
             {
                 Width = Math.Max(0, drawB - 2 * coverPx),
                 Height = Math.Max(0, drawH - 2 * coverPx),
-                Stroke = Brushes.Blue,
-                StrokeThickness = 2,
-                StrokeDashArray = new DoubleCollection { 4, 2 }, // Nét đứt
-                Fill = Brushes.Transparent // Để lộ màu bê tông nền
+                Stroke = Brushes.Red,
+                StrokeThickness = stirrupStroke,
+                RadiusX = cornerRadius,
+                RadiusY = cornerRadius
             };
+            Canvas.SetLeft(rectStirrup, startX + coverPx); Canvas.SetTop(rectStirrup, startY + coverPx);
+            DetailCanvas.Children.Add(rectStirrup);
 
-            Canvas.SetLeft(stirrup, startX + coverPx);
-            Canvas.SetTop(stirrup, startY + coverPx);
-            DetailCanvas.Children.Add(stirrup);
+            // Tọa độ tâm các thanh thép (trừ đi bán kính để vẽ hình tròn)
+            double centerOffset = coverPx + (stirrupStroke / 2) + (sizeCorner / 2);
+            double dotOffset = centerOffset - (sizeCorner / 2); // Tọa độ Top-Left của Ellipse
 
-            // ---------------------------------------------------------
-            // BƯỚC 3: VẼ THÉP CHỦ (NẰM TRONG CỐT ĐAI)
-            // ---------------------------------------------------------
-            if (col.BarQuantity < 4) return;
+            // 4. VẼ 4 THANH GÓC (CỐ ĐỊNH) - Luôn dùng Diameter1
+            DrawRebarDot(startX + centerOffset, startY + centerOffset, sizeCorner); // Góc TL
+            DrawRebarDot(startX + drawB - centerOffset, startY + centerOffset, sizeCorner); // Góc TR
+            DrawRebarDot(startX + drawB - centerOffset, startY + drawH - centerOffset, sizeCorner); // Góc BR
+            DrawRebarDot(startX + centerOffset, startY + drawH - centerOffset, sizeCorner); // Góc BL
 
-            double barSize = Math.Max(col.BarDiameter * scale * 1.5, 14);
+            // 5. VẼ THANH BỤNG PHƯƠNG X (TOP & BOTTOM)
+            // Tổng số thanh tham gia phương X (Quantity1 + Quantity2)
+            // Trừ đi 2 thanh góc đã vẽ -> Còn lại thanh bụng
+            int totalX = col.Quantity1_X + col.Quantity2_X;
+            int midsTotalX = totalX - 2;
+            int midsPerFaceX = midsTotalX / 2; // Số thanh bụng trên mỗi cạnh (Trên/Dưới)
 
-            // TỌA ĐỘ ĐẶT THÉP (CỰC KỲ QUAN TRỌNG)
-            // Thép chủ phải nằm lọt trong cốt đai.
-            // Tọa độ mép ngoài thép chủ = Tọa độ mép trong cốt đai.
-            // => Tọa độ Tâm thép = (Start + Cover + Đường kính đai) + (Bán kính thép chủ)
-            // Tuy nhiên hàm DrawBar của mình nhận tọa độ Tâm.
-            // Để đơn giản: Ta xác định khung chữ nhật "Lõi thép" đi qua TÂM các thanh thép.
-
-            // Khoảng cách từ mép bê tông đến TÂM thanh thép góc:
-            // Offset = Cover + d_dai + (d_chu / 2)
-            // Nhưng để vẽ cho đẹp và thoáng, ta chỉ cần đảm bảo nó nằm gọn trong đai.
-
-            // Offset tính từ mép bê tông vào đến tâm thanh thép:
-            double offsetToCenter = coverPx + stirrupPx + (barSize / 2);
-
-            // Chiều rộng/cao của hình chữ nhật nối tâm các thanh thép
-            double coreW = drawB - 2 * offsetToCenter;
-            double coreH = drawH - 2 * offsetToCenter;
-
-            // Tọa độ bắt đầu (Tâm thanh góc trái trên)
-            double coreX = startX + offsetToCenter;
-            double coreY = startY + offsetToCenter;
-
-            // Vẽ 4 thanh góc
-            DrawBar(coreX, coreY, barSize);
-            DrawBar(coreX + coreW, coreY, barSize);
-            DrawBar(coreX + coreW, coreY + coreH, barSize);
-            DrawBar(coreX, coreY + coreH, barSize);
-
-            // Vẽ các thanh giữa
-            int remain = col.BarQuantity - 4;
-            if (remain > 0)
+            if (midsPerFaceX > 0)
             {
-                int barsPerSide = (int)Math.Ceiling(remain / 2.0);
-                double gap = coreH / (barsPerSide + 1);
+                // Nếu có Quantity2 > 0 thì thanh bụng là thép lớp 2 (D2), ngược lại là D1
+                double dMidX = (col.Quantity2_X > 0) ? col.Diameter2_X : col.Diameter1_X;
+                double sizeMidX = Math.Max(dMidX * scale, 6.0);
 
-                for (int i = 1; i <= barsPerSide; i++)
+                // Khoảng cách rải đều
+                double gapX = (drawB - 2 * centerOffset) / (midsPerFaceX + 1);
+
+                for (int i = 1; i <= midsPerFaceX; i++)
                 {
-                    if (remain <= 0) break;
-                    double y = coreY + (gap * i);
+                    double x = startX + centerOffset + i * gapX;
 
-                    DrawBar(coreX, y, barSize); // Trái
-                    remain--;
+                    // Vẽ cạnh trên
+                    DrawRebarDot(x, startY + centerOffset, sizeMidX);
+                    // Vẽ cạnh dưới
+                    DrawRebarDot(x, startY + drawH - centerOffset, sizeMidX);
+                }
+            }
 
-                    if (remain > 0)
-                    {
-                        DrawBar(coreX + coreW, y, barSize); // Phải
-                        remain--;
-                    }
+            // 6. VẼ THANH BỤNG PHƯƠNG Y (LEFT & RIGHT)
+            // Tương tự: Tổng Y - 2 góc = Tổng bụng Y
+            int totalY = col.Quantity1_Y + col.Quantity2_Y;
+            int midsTotalY = totalY - 2;
+            int midsPerFaceY = midsTotalY / 2;
+
+            if (midsPerFaceY > 0)
+            {
+                double dMidY = (col.Quantity2_Y > 0) ? col.Diameter2_Y : col.Diameter1_Y;
+                double sizeMidY = Math.Max(dMidY * scale, 6.0);
+
+                double gapY = (drawH - 2 * centerOffset) / (midsPerFaceY + 1);
+
+                for (int j = 1; j <= midsPerFaceY; j++)
+                {
+                    double y = startY + centerOffset + j * gapY;
+
+                    // Vẽ cạnh trái
+                    DrawRebarDot(startX + centerOffset, y, sizeMidY);
+                    // Vẽ cạnh phải
+                    DrawRebarDot(startX + drawB - centerOffset, y, sizeMidY);
                 }
             }
         }
 
-        private void DrawBar(double x, double y, double size)
+        // Hàm vẽ chấm tròn (Input x,y là TÂM của chấm)
+        private void DrawRebarDot(double xCenter, double yCenter, double size)
         {
-            Ellipse bar = new Ellipse
+            Ellipse dot = new Ellipse
             {
                 Width = size,
                 Height = size,
                 Fill = Brushes.Red,
-                Stroke = Brushes.Black,
+                Stroke = Brushes.DarkRed,
                 StrokeThickness = 1
             };
-            // Hàm này nhận x, y là toạ độ TÂM của chấm tròn
-            Canvas.SetLeft(bar, x - size / 2);
-            Canvas.SetTop(bar, y - size / 2);
-            DetailCanvas.Children.Add(bar);
+            Canvas.SetLeft(dot, xCenter - size / 2);
+            Canvas.SetTop(dot, yCenter - size / 2);
+            DetailCanvas.Children.Add(dot);
         }
     }
 }

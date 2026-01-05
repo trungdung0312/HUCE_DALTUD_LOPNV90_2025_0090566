@@ -92,21 +92,21 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.ViewModel
             return new ColumnInputData
             {
                 ColumnName = "C" + (ColumnsList.Count + 1),
-                ConcreteGrade = "B20",
+                ConcreteGrade = "B25",
                 SteelGrade = "CB400-V",
 
                 // Mặc định Cốt đai
                 StirrupGrade = "CB240-T",
-                StirrupDiameter = 6,
+                StirrupDiameter = 8,
 
-                IsVerticalPouring = true, // Mặc định đổ bê tông > 1.5m (an toàn)
+                IsVerticalPouring = false, // Mặc định đổ bê tông > 1.5m (an toàn)
                 StructureType = StructureType.StaticallyIndeterminate, // Mặc định siêu tĩnh
 
-                B = 300,
-                H = 400,
-                L = 3600,
-                Psi = 0.7,
-                ConcreteCover = 25,
+                B = 0,
+                H = 0,
+                L = 0,
+                Psi = 1,
+                ConcreteCover = 40,
 
                 // Khởi tạo nội lực = 0
                 N = 0,
