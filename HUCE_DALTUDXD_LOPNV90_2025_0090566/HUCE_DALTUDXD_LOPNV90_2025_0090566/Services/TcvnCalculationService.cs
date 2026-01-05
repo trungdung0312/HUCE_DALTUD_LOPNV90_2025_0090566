@@ -27,9 +27,9 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Services
 
             try
             {
-                // =======================================================================
+               
                 // XỬ LÝ QUY ĐỔI NỘI LỰC (LỆCH TÂM XIÊN -> PHẲNG)
-                // =======================================================================
+                
                 double calc_B = input.B;
                 double calc_H = input.H;
                 double calc_M = Math.Abs(input.Mx);

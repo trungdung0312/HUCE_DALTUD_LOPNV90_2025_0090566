@@ -24,7 +24,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
         private RebarDesignPage _rebarPage;
         private FinalReportPage _reportPage;
 
-        // [MỚI] Biến lưu trữ dữ liệu hiện tại để dùng chung cho các trang
+        // Biến lưu trữ dữ liệu hiện tại để dùng chung cho các trang
         private List<RebarResultData> _currentData;
 
         public MainWindow()
@@ -62,8 +62,8 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
 
         private void BtnFinal_Click(object sender, RoutedEventArgs e)
         {
-            // [QUAN TRỌNG] Nạp dữ liệu mới nhất vào trang báo cáo trước khi chuyển trang
-            // Điều này đảm bảo những chỉnh sửa thép ở bước trước đó được cập nhật lên bảng
+            // Nạp dữ liệu mới nhất vào trang báo cáo trước khi chuyển trang
+            
             if (_currentData != null)
             {
                 _reportPage.LoadData(_currentData);
@@ -84,7 +84,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views
         // Hàm này được gọi từ ColumnInputPage sau khi bấm "TÍNH TOÁN"
         public void ShowResults(List<RebarResultData> results)
         {
-            // [MỚI] Lưu dữ liệu vào biến toàn cục của MainWindow
+            // Lưu dữ liệu vào biến toàn cục của MainWindow
             _currentData = results;
 
             // Nạp dữ liệu vào trang Xem trước

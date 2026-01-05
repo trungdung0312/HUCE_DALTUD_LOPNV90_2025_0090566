@@ -75,8 +75,8 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Model
             }
         }
 
-        // --- THÊM THUỘC TÍNH NÀY ĐỂ SỬA LỖI CS1061 VÀ DÙNG CHO BÁO CÁO ---
-        // Thuộc tính này tách biệt X và Y (VD: "X: 4Φ20 | Y: 2Φ18") để báo cáo chi tiết hơn
+        
+        // Thuộc tính này tách biệt X và Y (VD: "X: 4Φ20 | Y: 2Φ18") 
         public string SteelSummary
         {
             get

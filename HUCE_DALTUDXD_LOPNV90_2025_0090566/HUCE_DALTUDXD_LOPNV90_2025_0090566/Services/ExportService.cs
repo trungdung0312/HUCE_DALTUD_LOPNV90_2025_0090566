@@ -66,7 +66,7 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Services
                 sb.AppendLine($"<td><b>{item.ColumnName}</b></td>");
                 sb.AppendLine($"<td>{item.B}x{item.H}</td>");
 
-                // [MỚI] Cột Vật liệu
+                // Cột Vật liệu
                 sb.AppendLine($"<td>{item.ConcreteGrade}<br/>{item.SteelGrade}</td>");
 
                 // Nội lực
