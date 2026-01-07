@@ -5,7 +5,11 @@ winexe
 C#
 .cs
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\DELL\Documents\GitHub\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\
+=======
+C:\Users\ASUS\OneDrive\Tài liệu\DOANLAPTRINH\HUCE_DALTUD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\
+>>>>>>> Stashed changes
 =======
 C:\Users\ASUS\OneDrive\Tài liệu\DOANLAPTRINH\HUCE_DALTUD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\obj\Debug\
 >>>>>>> Stashed changes
@@ -13,6 +17,7 @@ HUCE_DALTUDXD_LOPNV90_2025_0090566
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 C:\Users\DELL\Documents\GitHub\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\App.xaml
 5-1515901734
@@ -22,6 +27,11 @@ C:\Users\DELL\Documents\GitHub\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_
 C:\Users\ASUS\OneDrive\Tài liệu\DOANLAPTRINH\HUCE_DALTUD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\App.xaml
 5-1515901734
 
+=======
+C:\Users\ASUS\OneDrive\Tài liệu\DOANLAPTRINH\HUCE_DALTUD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\HUCE_DALTUDXD_LOPNV90_2025_0090566\App.xaml
+5-1515901734
+
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -35,6 +45,9 @@ C:\Users\ASUS\OneDrive\Tài liệu\DOANLAPTRINH\HUCE_DALTUD_LOPNV90_2025_00905
 =======
 19-1056269262
 >>>>>>> 795e0369044acd4ae326d5b7e6aa7fc6773fd0d7
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 13-38814620
 Views\MainWindow.xaml;Views\Pages\ColumnInputPage.xaml;Views\Pages\FinalReportPage.xaml;Views\Pages\RebarDesignPage.xaml;Views\Pages\ResultPreviewPage.xaml;
