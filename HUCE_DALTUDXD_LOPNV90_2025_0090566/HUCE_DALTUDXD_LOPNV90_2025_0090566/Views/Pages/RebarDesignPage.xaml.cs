@@ -110,53 +110,59 @@ namespace HUCE_DALTUDXD_LOPNV90_2025_0090566.Views.Pages
             DrawRebarDot(startX + centerOffset, startY + drawH - centerOffset, sizeCorner); // Góc BL
 
             // 5. VẼ THANH BỤNG PHƯƠNG X (TOP & BOTTOM)
-            // Tổng số thanh tham gia phương X (Quantity1 + Quantity2)
-            // Trừ đi 2 thanh góc đã vẽ -> Còn lại thanh bụng
             int totalX = col.Quantity1_X + col.Quantity2_X;
-            int midsTotalX = totalX - 2;
-            int midsPerFaceX = midsTotalX / 2; // Số thanh bụng trên mỗi cạnh (Trên/Dưới)
 
-            if (midsPerFaceX > 0)
+            // Phải có tối thiểu 2 thanh (2 góc) mới xét tiếp
+            if (totalX > 2)
             {
-                // Nếu có Quantity2 > 0 thì thanh bụng là thép lớp 2 (D2), ngược lại là D1
-                double dMidX = (col.Quantity2_X > 0) ? col.Diameter2_X : col.Diameter1_X;
-                double sizeMidX = Math.Max(dMidX * scale, 6.0);
+                int midsPerFaceX = (totalX - 2) / 2;
 
-                // Khoảng cách rải đều
-                double gapX = (drawB - 2 * centerOffset) / (midsPerFaceX + 1);
-
-                for (int i = 1; i <= midsPerFaceX; i++)
+                if (midsPerFaceX > 0)
                 {
-                    double x = startX + centerOffset + i * gapX;
+                    double dMidX = (col.Quantity2_X > 0)
+                        ? col.Diameter2_X
+                        : col.Diameter1_X;
 
-                    // Vẽ cạnh trên
-                    DrawRebarDot(x, startY + centerOffset, sizeMidX);
-                    // Vẽ cạnh dưới
-                    DrawRebarDot(x, startY + drawH - centerOffset, sizeMidX);
+                    double sizeMidX = Math.Max(dMidX * scale, 6.0);
+                    double gapX = (drawB - 2 * centerOffset) / (midsPerFaceX + 1);
+
+                    for (int i = 1; i <= midsPerFaceX; i++)
+                    {
+                        double x = startX + centerOffset + i * gapX;
+
+                        // Cạnh trên
+                        DrawRebarDot(x, startY + centerOffset, sizeMidX);
+                        // Cạnh dưới
+                        DrawRebarDot(x, startY + drawH - centerOffset, sizeMidX);
+                    }
                 }
             }
 
             // 6. VẼ THANH BỤNG PHƯƠNG Y (LEFT & RIGHT)
-            // Tương tự: Tổng Y - 2 góc = Tổng bụng Y
             int totalY = col.Quantity1_Y + col.Quantity2_Y;
-            int midsTotalY = totalY - 2;
-            int midsPerFaceY = midsTotalY / 2;
 
-            if (midsPerFaceY > 0)
+            if (totalY > 2)
             {
-                double dMidY = (col.Quantity2_Y > 0) ? col.Diameter2_Y : col.Diameter1_Y;
-                double sizeMidY = Math.Max(dMidY * scale, 6.0);
+                int midsPerFaceY = (totalY - 2) / 2;
 
-                double gapY = (drawH - 2 * centerOffset) / (midsPerFaceY + 1);
-
-                for (int j = 1; j <= midsPerFaceY; j++)
+                if (midsPerFaceY > 0)
                 {
-                    double y = startY + centerOffset + j * gapY;
+                    double dMidY = (col.Quantity2_Y > 0)
+                        ? col.Diameter2_Y
+                        : col.Diameter1_Y;
 
-                    // Vẽ cạnh trái
-                    DrawRebarDot(startX + centerOffset, y, sizeMidY);
-                    // Vẽ cạnh phải
-                    DrawRebarDot(startX + drawB - centerOffset, y, sizeMidY);
+                    double sizeMidY = Math.Max(dMidY * scale, 6.0);
+                    double gapY = (drawH - 2 * centerOffset) / (midsPerFaceY + 1);
+
+                    for (int j = 1; j <= midsPerFaceY; j++)
+                    {
+                        double y = startY + centerOffset + j * gapY;
+
+                        // Cạnh trái
+                        DrawRebarDot(startX + centerOffset, y, sizeMidY);
+                        // Cạnh phải
+                        DrawRebarDot(startX + drawB - centerOffset, y, sizeMidY);
+                    }
                 }
             }
         }
